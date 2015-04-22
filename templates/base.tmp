@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>{title}</title>
+
+		<!-- <link rel="shortcut icon" href="{CONFIG_WEBSITE}/{CONFIG_IMG_DIR}/favicon.png" type="image/x-icon">
+		<link rel="icon" href="{CONFIG_WEBSITE}/{CONFIG_IMG_DIR}/favicon.png" type="image/x-icon"> -->
+		<link rel="stylesheet" href="{CONFIG_WEBSITE}/{CONFIG_CSS_DIR}/[block css]style.css[end]">
+	</head>
+	
+	<body>
+		[block header][end]
+
+		[block content][end]
+
+		[block footer][end]
+
+		[block script][end]
+	</body>
+</html>

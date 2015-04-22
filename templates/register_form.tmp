@@ -1,0 +1,10 @@
+<!-- sve da ide preko AJAX sa jQuery, mnogo je lepse i lakse, ili pak da ide preko forme -->
+
+<div>
+	<input type="text" id="email">
+	<input type="password" id="password">
+
+	<div id="dugme"></div>
+
+	<div id="response"></div>		
+</div>

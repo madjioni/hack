@@ -1,0 +1,29 @@
+{
+    "WEBSITE":              "http://hack.madjionicarskitrikovi.com",
+    "TITLE":                "SajtIme",
+    "AUTHOR":               "Black Photon",
+    "ADMIN_MAIL":           "madjioni.mejl [at] gmail.com",
+
+    "DB_NAME":              "madjioni_hack_db",
+    "DB_USER":              "madjioni_hack_us",
+    "DB_PASS":              "madjioni_hack_us",
+    "DB_HOST":              "madjionicarskitrikovi.com",
+
+    "MODEL_DIR":            "models",
+    "VIEW_DIR":             "templates",
+    "CTRL_DIR":             "controllers",
+
+    "MEDIA_DIR":            "media",
+    "CSS_DIR":              "MEDIA_DIR/css",
+    "IMG_DIR":              "MEDIA_DIR/images",
+    "FONT_DIR":             "MEDIA_DIR/fonts",
+    "JS_DIR":               "MEDIA_DIR/js",
+
+    "NO_ACCESS_ADMIN":      [],
+    "NO_ACCESS_USER":       ["dashboard"],
+    "NO_ACCESS_VISITOR":    ["profile"],
+
+    "LVL_ADMIN":            [],
+    "LVL_USER":             ["NO_ACCESS_USER"],
+    "LVL_VISITOR":          ["NO_ACCESS_USER", "NO_ACCESS_VISITOR"]
+}

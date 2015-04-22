@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+Options -Indexes
+RewriteEngine On
+RewriteBase /
+
+RewriteRule app/config\.json /index.php [L,NC]
+RewriteRule [^\.]*\.\.[\w\-_]* /index.php[L,NC]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule !^public /index.php [L,NC]
