@@ -14,6 +14,8 @@ __/skripta/a/1/b/2__
  - nije moguce pisati JS direktno u html, nego se mora uvesti JS fajl:
 `<script type="javascript/text" src="{JS_DIR}/huehue.js">`
 
+ - jQuery je automatski ucitan prilikom dohvatanja **base.tmp** templejta
+
  - neka globalno vidljiva varijabla (ista na celom serveru, za sve klijente),
 se moze napraviti tako sto se u __/app/config.json__ ubaci jos jedna linija
 
