@@ -6,15 +6,15 @@ sajt je online na: http://hack.madjionicarskitrikovi.com/
 ###Korisne stvari
 
 ####GENERAL
-ne pise se link:
+ - ne pise se link:
 __/skripta.php?a=1&b=2__
 nego:
 __/skripta/a/1/b/2__
 
-nije moguce pisati JS direktno u html, nego se mora uvesti JS fajl:
+ - nije moguce pisati JS direktno u html, nego se mora uvesti JS fajl:
 `<script type="javascript/text" src="{JS_DIR}/huehue.js">`
 
-neka globalno vidljiva varijabla (ista na celom serveru, za sve klijente),
+ - neka globalno vidljiva varijabla (ista na celom serveru, za sve klijente),
 se moze napraviti tako sto se u __/app/config.js__ ubaci jos jedna linija
 
 ####DB
@@ -43,4 +43,4 @@ ucitava view
 dohvata parsiran tekst view-a
 
 `->render()`
-prikazuje tekst ( echo template->get(); )
+prikazuje tekst ( `echo template->get();` )
