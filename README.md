@@ -21,6 +21,10 @@ se moze napraviti tako sto se u __/app/config.json__ ubaci jos jedna linija
 
  - jos pojasnjenja etc: https://github.com/AbstractAlgorithm/AbstractAlgorithm
 
+ - tok aplikacije
+
+![dijagram](https://raw.githubusercontent.com/madjioni/hack/master/diagram.png)
+
 ####DB
 `DB::Query( "..." )`
 izvrsava query u bazi i vraca rez
