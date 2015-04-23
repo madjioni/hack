@@ -54,6 +54,6 @@ final class Core
         Request::Route();                                                       // handle request
         
         DB::End();                                                              // close database
-        // Session::End();                                                      // close session
+        //Session::End();                                                      // close session
     }
 }

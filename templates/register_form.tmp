@@ -1,10 +1,13 @@
 <!-- sve da ide preko AJAX sa jQuery, mnogo je lepse i lakse, ili pak da ide preko forme -->
 
-<div>
-	<input type="text" id="email">
-	<input type="password" id="password">
+<div class="exampleform">
+    <h4>Register</h4>
+	<input type="text" id="email_reg">
+	<input type="password" id="password_reg">
 
-	<div id="dugme"></div>
+	<div id="dugme_reg">Register!</div>
 
-	<div id="response"></div>		
+	<div id="response_reg"></div>		
 </div>
+
+<script type="text/javascript" src="{JS_DIR}/register.js"></script>

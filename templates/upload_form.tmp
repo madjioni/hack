@@ -1,9 +1,14 @@
-<!-- sve da ide preko AJAX sa jQuery, mnogo je lepse i lakse, ili pak da ide preko forme -->
+<form enctype="multipart/form-data" action="/upload" method="post" class="exampleform">
+    <input type="text" id="filename" name="filename"><br>
+    <input id="inp_file" type="file" accept=".txt,.xml" name="inp_file"/><br>
 
-<div>
-	<input type="text" id="email"> <!-- file select -->
+    <!-- SYNC version -->
+    <!-- <input type="submit" value="Upload"> -->
 
-	<div id="dugme"></div>
+    <!-- ASYNC version -->
+    <div id="upload_btn">Upload</div>
+    <div id="upload_res">Result:</div>
+</form>
 
-	<div id="response"></div>		
-</div>
+<!-- ASYNC version only -->
+<script type="text/javascript" src="{JS_DIR}/upload_file.js"></script>

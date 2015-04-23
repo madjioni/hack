@@ -30,23 +30,13 @@ final class Session
     public static function Start()
     {
         session_start();
-        $_SESSION['auth_data'] = array();
-        $_SESSION['auth_data']['username'] = null;
-        $_SESSION['auth_data']['password'] = null;
-        $_SESSION['auth_data']['email'] = null;
-        $_SESSION['auth_data']['level'] = 'LVL_VISITOR'; 
-    }
-
-    /**
-    * Destroys the session and resets all the session data.
-    */
-    public static function End()
-    {
-        $_SESSION['auth_data']['username'] = null;
-        $_SESSION['auth_data']['password'] = null;
-        $_SESSION['auth_data']['email'] = null;
-        $_SESSION['auth_data']['level'] = 'LVL_VISITOR'; 
-        session_destroy();
+        if(!isset($_SESSION['auth_data']))
+            $_SESSION['auth_data'] = array();
+        //$_SESSION['auth_data'] = array();
+        //$_SESSION['auth_data']['username'] = null;
+        //$_SESSION['auth_data']['pass'] = null;
+        //$_SESSION['auth_data']['email'] = null;
+        //$_SESSION['auth_data']['level'] = 'LVL_VISITOR'; 
     }
 
     /**
@@ -58,19 +48,34 @@ final class Session
     */
     public static function Login($email, $password)
     {
-        $query =   'SELECT id, username, email, password 
+        $query =   'SELECT email, pass 
                     FROM users 
                     WHERE email=\''.$email.'\' 
-                    AND password=\''.sha1($password).'\'';
+                    AND pass=\''.sha1($password).'\'
+                    AND active=1';
 
-        $result = mysqli_query( $db_connection, $query );
+        $result = DB::Query($query);
         if($result)
-        {    
-            $_SESSION['auth_data']['username'] = $result[0]['username'];
-            $_SESSION['auth_data']['password'] = $password;
+        {   
+            //$_SESSION['auth_data']['username'] = $result[0]['username'];
+            $_SESSION['auth_data']['pass'] = $password;
             $_SESSION['auth_data']['email'] = $email;
-            $_SESSION['auth_data']['level'] = 'LVL_VISITOR';                    // TODO : calc permissions
+            //$_SESSION['auth_data']['level'] = 'LVL_VISITOR';
+            return true;
         }
+        return false;
+    }
+
+    /**
+    * Logs out, destroying session data.
+    */
+    public static function Logout()
+    {
+        //$_SESSION['auth_data']['username'] = null;
+        $_SESSION['auth_data']['pass'] = null;
+        $_SESSION['auth_data']['email'] = null;
+        //$_SESSION['auth_data']['level'] = 'LVL_VISITOR';
+        session_destroy(); 
     }
 
     /**
@@ -81,9 +86,9 @@ final class Session
     */
     public static function HasAccess($uri)
     {
-        $has_no_access_to = self::$levels[$_SESSION['auth_data']['level']];
-        if (preg_match('/'.$uri.'/i', $has_no_access_to))
-            return false;    
+        // $has_no_access_to = self::$levels[$_SESSION['auth_data']['level']];
+        // if (preg_match('/'.$uri.'/i', $has_no_access_to))
+        //     return false;    
         return true;
     }
 

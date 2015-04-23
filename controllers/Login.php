@@ -4,14 +4,15 @@ class LoginController extends Controller {
 
     public function run()
     {
-        Template::load('base')
-            ->title("Login")
-            
-            ->content
-            (
-                Template::load('login_form') -> get()
-            )
+        $email = Request::GET('email');
+        $pass = Request::GET('pass');
+        $res = 'not good';
 
-            ->render();
+        if(Session::Login($email, $pass))
+        {
+            $res = 'all good';
+        }
+
+        echo $res;
     }
 }

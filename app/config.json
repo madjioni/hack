@@ -7,7 +7,7 @@
     "DB_NAME":              "madjioni_hack_db",
     "DB_USER":              "madjioni_hack_us",
     "DB_PASS":              "madjioni_hack_us",
-    "DB_HOST":              "madjionicarskitrikovi.com",
+    "DB_HOST":              "localhost",
 
     "MODEL_DIR":            "models",
     "VIEW_DIR":             "templates",

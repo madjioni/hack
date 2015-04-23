@@ -136,4 +136,11 @@ final class Request
             return $_POST[func_get_arg(0)];
         return $_POST;
     }
+
+    public static function FILES()
+    {
+        if(func_num_args()==1)
+            return $_FILES[func_get_arg(0)];
+        return $_FILES;
+    }
 }
