@@ -19,6 +19,8 @@ __/skripta/a/1/b/2__
  - neka globalno vidljiva varijabla (ista na celom serveru, za sve klijente),
 se moze napraviti tako sto se u __/app/config.json__ ubaci jos jedna linija
 
+ - jos pojasnjenja etc: https://github.com/AbstractAlgorithm/AbstractAlgorithm
+
 ####DB
 `DB::Query( "..." )`
 izvrsava query u bazi i vraca rez
