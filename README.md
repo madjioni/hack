@@ -15,7 +15,7 @@ __/skripta/a/1/b/2__
 `<script type="javascript/text" src="{JS_DIR}/huehue.js">`
 
  - neka globalno vidljiva varijabla (ista na celom serveru, za sve klijente),
-se moze napraviti tako sto se u __/app/config.js__ ubaci jos jedna linija
+se moze napraviti tako sto se u __/app/config.json__ ubaci jos jedna linija
 
 ####DB
 `DB::Query( "..." )`
