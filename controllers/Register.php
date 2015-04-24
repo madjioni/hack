@@ -26,6 +26,8 @@ class RegisterController extends Controller {
             $message = 'To confirm your registration, please click on the link: <a href="'.Core::$config['WEBSITE'].'/confirm/user/'.$email.'">confirm</a>.';
             $headers = "MIME-Version: 1.0\r\n";
             $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+            $headers .= "Reply-To: NoReply <noreply@madjionicarskitrikovi.com>\r\n";
+            $headers .= "From: ".Core::$config['TITLE']." registration <noreply@madjionicarskitrikovi.com>\r\n"; 
 
             // TODO: send email confirmation
             mail($to, $subject, $message, $headers);
