@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     $( "#dugme_log" ).click(function() {
-        
+
         $('#response_log').html("Login res: ");
         var f_email = $('#email_log').val();
         var f_pass = $('#password_log').val();
@@ -21,7 +21,7 @@ $(document).ready(function() {
                 window.location.href = '/';
                 //$('#response_log').html('Dobri podaci.');
             }
-            
+
         });
 
     });
