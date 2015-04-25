@@ -4,15 +4,21 @@ class LoginController extends Controller {
 
     public function run()
     {
-        $email = Request::GET('email');
-        $pass = Request::GET('pass');
-        $res = 'not good';
+        $logged = isset(Session::GetData()['email']);
+        $korisnik = $logged ? Session::GetData()['email'] : 'niko';
+        // var_dump($logged);
+        // var_dump($korisnik);
 
-        if(Session::Login($email, $pass))
-        {
-            $res = 'all good';
-        }
+        Template::load('base')
+            ->title('Ulaz')
+            ->logged($logged)
+            ->korisnik($korisnik)
+            ->content
+            (
+                Template::load('login_form')
+                    ->get()
+            )
+        ->render();
 
-        echo $res;
     }
 }

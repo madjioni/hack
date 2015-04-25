@@ -13,7 +13,21 @@
 	</head>
 	
 	<body>
-		[block header][end]
+		<header>
+			<h1>{title}</h1>
+			<div>
+			[if logged]
+			    <a href="/user">Panel {korisnik}</a>
+			    <a href="/logout/">Izloguj se</a>
+			[else]
+			    <a href="/login">Login</a>
+			[end]
+			</div>
+		</header>
+
+		<a href="/login">login</a>
+		<a href="/logout">logout</a>
+		<a href="/register">reg</a>
 
 		[block content][end]
 

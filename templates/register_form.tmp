@@ -1,13 +1,34 @@
 <!-- sve da ide preko AJAX sa jQuery, mnogo je lepse i lakse, ili pak da ide preko forme -->
 
-<div class="exampleform">
-    <h4>Register</h4>
-	<input type="text" id="email_reg">
-	<input type="password" id="password_reg">
+<form name="form_rfe" action="/Registration/t/e" method="POST">
+    <h4>Register employer</h4>
+	<input type="text" name="firstname_rfe"><br>
+    <input type="text" name="lastname_rfe"><br>
+    <input type="email" name="email_rfe"><br>
+	<input type="password" name="pass_rfe"><br>
+    <!-- PONOVI PASSWORD -->
+    <input type="text" name="location_rfe"><br>
+    <input type="text" name="phone_rfe"><br>
+    <textarea name="description_rfe" cols="30" rows="5"></textarea><br>
 
-	<div id="dugme_reg">Register!</div>
+	<button type="submit" value="Registracija">Registracija</button>
+</form>
 
-	<div id="response_reg"></div>		
-</div>
 
-<script type="text/javascript" src="{JS_DIR}/register.js"></script>
+<form name="form_rfw" action="/Registration/t/w" method="POST">
+    <h4>Register worker</h4>
+    <input type="text" name="firstname_rfw"><br>
+    <input type="text" name="lastname_rfw"><br>
+    <input type="email" name="email_rfw"><br>
+    <input type="password" name="pass_rfw"><br>
+    <!-- PONOVI PASSWORD -->
+    <input type="text" name="location_rfw"><br>
+    <input type="text" name="phone_rfw"><br>
+    <input type="number" name="age_rfw" min="15" max="50"><br>
+    <select name="gender_rfw"><br>
+        <option value="m">Musko</option>
+        <option value="f">Zensko</option>
+    </select>
+
+    <button type="submit" value="Registracija">Registracija</button>
+</form>

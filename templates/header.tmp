@@ -1,0 +1,12 @@
+<header>
+<h1>{title}</h1>
+<div>
+[if !logged]
+    <input type="text" id="mejl">
+    <input type="text" id="pass">
+    <div id="dugme_login">Uloguj se</div>
+[else]
+    <div id="dugme_user">{ime}</div>
+[end]
+</div>
+</header>

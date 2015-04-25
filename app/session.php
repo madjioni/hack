@@ -49,7 +49,7 @@ final class Session
     public static function Login($email, $password)
     {
         $query =   'SELECT email, pass 
-                    FROM users 
+                    FROM worker 
                     WHERE email=\''.$email.'\' 
                     AND pass=\''.sha1($password).'\'
                     AND active=1';
@@ -58,11 +58,30 @@ final class Session
         if($result)
         {   
             //$_SESSION['auth_data']['username'] = $result[0]['username'];
+            $_SESSION['auth_data']['type'] = 'worker';
             $_SESSION['auth_data']['pass'] = $password;
             $_SESSION['auth_data']['email'] = $email;
             //$_SESSION['auth_data']['level'] = 'LVL_VISITOR';
             return true;
         }
+
+        $query =   'SELECT email, pass 
+                    FROM emplyer 
+                    WHERE email=\''.$email.'\' 
+                    AND pass=\''.sha1($password).'\'
+                    AND active=1';
+
+        $result = DB::Query($query);
+        if($result)
+        {   
+            //$_SESSION['auth_data']['username'] = $result[0]['username'];
+            $_SESSION['auth_data']['type'] = 'employer';
+            $_SESSION['auth_data']['pass'] = $password;
+            $_SESSION['auth_data']['email'] = $email;
+            //$_SESSION['auth_data']['level'] = 'LVL_VISITOR';
+            return true;
+        }
+
         return false;
     }
 
@@ -72,6 +91,7 @@ final class Session
     public static function Logout()
     {
         //$_SESSION['auth_data']['username'] = null;
+        $_SESSION['auth_data']['type'] = null;
         $_SESSION['auth_data']['pass'] = null;
         $_SESSION['auth_data']['email'] = null;
         //$_SESSION['auth_data']['level'] = 'LVL_VISITOR';

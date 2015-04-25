@@ -1,17 +1,10 @@
-[if !logged]
-
 <div class="exampleform">
     <h4>Login</h4>
-	<input type="text" id="email_log">
-    <br>
-	<input type="password" id="password_log">
+	<input type="text" id="email_log"><br>
+	<input type="password" id="password_log"><br>
 
 	<div id="dugme_log">Login</div>
     <div id="response_log">Login res: </div>		
 </div>
 
 <script type="text/javascript" src="{JS_DIR}/login.js"></script>
-
-[else]
-<p>Ulogovan kao: {korisnik}<br><a href="/logout">logout</a></p>
-[end]
