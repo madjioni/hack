@@ -19,25 +19,18 @@ class ListController extends Controller {
         $i = 0;
         foreach($poslovi as $posao)
         {
-
-
             $q = "SELECT * FROM employer WHERE id=" . $posao->idemployer;
             $poslodavac = Employer::Query($q);
             $ime =  $poslodavac[0]->firstname;
             $id = $poslodavac[0]->id;
 
             $now = date('m/d/Y h:i:s a', time());
-            var_dump($now);
             $unix_now = strtotime($now);
-            var_dump($unix_now);
-
-            
+         
             $start = date('m/d/Y h:i:s a', strtotime($posao->activestart));
             $unix_start = strtotime($start);
-            var_dump($unix_start);
 
             $diff = $posao->activeend * 24 * 60 * 60 * 1000;
-
 
             if($start+$diff > $now)
             {
