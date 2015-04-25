@@ -26,32 +26,24 @@ class ListController extends Controller {
             $ime =  $poslodavac[0]->firstname;
             $id = $poslodavac[0]->id;
 
-           //  //var_dump($poslovi[$i++]->title);
-           //  $start = ($poslovi[$i]->activestart);
-           //  //var_dump($start);
-           //  //$start_plus_end = date_add($start, date_interval_create_from_date_string(($poslovi[$i]->activeend).'days'));;
+            $now = date('m/d/Y h:i:s a', time());
+            var_dump($now);
+            $unix_now = strtotime($now);
+            var_dump($unix_now);
 
-           //  $start_plus_end = DateTime::createFromFormat($format, $start);
+            
+            $start = date('m/d/Y h:i:s a', strtotime($posao->activestart));
+            $unix_start = strtotime($start);
+            var_dump($unix_start);
 
-           // //var_dump($start_plus_end);
-           // // var_dump($poslovi[$i]->activeend);
-           //  $start_plus_end->modify('+'.$poslovi[$i]->activeend.' days');
-           // // var_dump($start_plus_end);
-           //  $i++;
-
-
-             
-           // // var_dump($start_plus_end);
-           // /* echo("\n\n");
-           //  */
-           // // var_dump($cur_date);
+            $diff = $posao->activeend * 24 * 60 * 60 * 1000;
 
 
-           //  //POREDJENJE LOSE!
-           //  if($start_plus_end>$cur_date){
+            if($start+$diff > $now)
+            {
                 $sadrzaj .= Template::load('posao')->ime($ime)->posao($posao)->poslid($id)->get();
                 $posao->pricetype = $posao->pricetype==1?'RSD/dan':$posao->pricetype==2?'RSD/h':'RSD/kg';
-            // }
+            }
 
         }
 
