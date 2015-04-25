@@ -24,7 +24,8 @@ class CreatingJobController extends Controller {
 ".Session::
             GetData()['email']."
 */
-        $empl_res = DB::Query(" SELECT id from employer where mail='dragan.okan@gmail.com'");
+        $empl_res = DB::Query(" SELECT id from employer where mail='".Session::
+            GetData()['email']."'");
 
 
         if($empl_res){
@@ -45,10 +46,10 @@ class CreatingJobController extends Controller {
             var_dump($price);
             var_dump($price_type);
             var_dump($time);
-                        var_dump($transport);
 
             var_dump($category);
 */
+                        var_dump($transport);
 
 
             $res = DB::Query("INSERT INTO job VALUES (0, '$title', '$description', '$location', '$date_start', '$date_end', '$num', $price , $price_type, $time,'$transport',0,7,".$empl_res[0][0].",$category)");
