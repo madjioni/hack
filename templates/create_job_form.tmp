@@ -21,9 +21,9 @@
 
      price type : <br>
     <select name="price_type">
-        <option value="1">po satu</option>
-        <option value="2">po danu</option>
-        <option value="3">po zavrsenom poslu</option>
+        <option value="1">RSD/dan</option>
+        <option value="2">RSD/h</option>
+        <option value="3">RSD/kg</option>
 
     </select> <br>
 
