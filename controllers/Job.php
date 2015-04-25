@@ -68,7 +68,6 @@ class JobController extends Controller {
             }
         }
 
-        
 
         Template::load('base')
             ->title('Poslovi')

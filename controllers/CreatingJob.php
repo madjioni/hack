@@ -18,14 +18,7 @@ class CreatingJobController extends Controller {
         $transport=Request::POST('transport');
         $category=Request::POST('category');
 
-
-//dragan.okan@gmail.com
-/*
-".Session::
-            GetData()['email']."
-*/
-        $empl_res = DB::Query(" SELECT id from employer where mail='".Session::
-            GetData()['email']."'");
+        $empl_res = DB::Query(" SELECT id from employer where mail='".Session::GetData()['email']."'");
 
 
         if($empl_res){
@@ -49,7 +42,6 @@ class CreatingJobController extends Controller {
 
             var_dump($category);
 */
-                        var_dump($transport);
 
 
             $res = DB::Query("INSERT INTO job VALUES (0, '$title', '$description', '$location', '$date_start', '$date_end', '$num', $price , $price_type, $time,'$transport',0,7,".$empl_res[0][0].",$category)");
