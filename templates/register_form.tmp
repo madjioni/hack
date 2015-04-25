@@ -1,27 +1,74 @@
 <!-- sve da ide preko AJAX sa jQuery, mnogo je lepse i lakse, ili pak da ide preko forme -->
 
-<form name="form_rfe" action="/Registration/t/e" method="POST">
-    <h4>Register employer</h4>
-	<input type="text" name="firstname_rfe"><br>
-    <input type="text" name="lastname_rfe"><br>
-    <input type="email" name="email_rfe"><br>
-	<input type="password" name="pass_rfe"><br>
-    <!-- PONOVI PASSWORD -->
-    <input type="text" name="location_rfe"><br>
-    <input type="text" name="phone_rfe"><br>
-    <textarea name="description_rfe" cols="30" rows="5"></textarea><br>
+    <div id="home" class="static-header light">
+        <div class="text-heading">
+            <h1>Registracija <span class="highlight">poslodavca</span></h1>
+        </div>
 
-	<button type="submit" value="Registracija">Registracija</button>
-</form>
+  <a id="showHere"></a>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                    <form class="form form-register dark" id="registration" method="post" name="form_rfe" action="/Registration/t/e" method="POST">
+                        <div class="form-group">
+                            <label for="firstname" class="col-sm-3 col-xs-12 control-label">Ime</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <input type="text" name="firstname_rfe" class="form-control required" id="firstname" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-3 col-xs-12 control-label">Prezime</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <input type="text" name="lastname_rfe" class="form-control required" id="lastname" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-3 col-xs-12 control-label">Email</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <input type="email" name="email_rfe" class="form-control required email" id="email" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-3 col-xs-12 control-label">Šifra</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <input type="password" name="pass_rfe" class="form-control" id="password" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="col-sm-3 col-xs-12 control-label">Telefon</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <input type="text" name="phone_rfe" class="form-control required phone" id="phone" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="location" class="col-sm-3 col-xs-12 control-label">Lokacija</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <input type="text" name="location_rfe" class="form-control" id="location" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="col-sm-3 col-xs-12 control-label">Opis</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <textarea type="text" class="form-control required" name="description_rfe" id="description" placeholder=""></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Regisrtruj se</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+<!--
 <form name="form_rfw" action="/Registration/t/w" method="POST">
     <h4>Register worker</h4>
     <input type="text" name="firstname_rfw"><br>
     <input type="text" name="lastname_rfw"><br>
     <input type="email" name="email_rfw"><br>
     <input type="password" name="pass_rfw"><br>
-    <!-- PONOVI PASSWORD -->
+    <input type="password" name="pass_rfw"><br>
     <input type="text" name="location_rfw"><br>
     <input type="text" name="phone_rfw"><br>
     <input type="number" name="age_rfw" min="15" max="50"><br>
@@ -31,4 +78,4 @@
     </select>
 
     <button type="submit" value="Registracija">Registracija</button>
-</form>
+</form> -->
