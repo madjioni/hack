@@ -25,11 +25,10 @@ class ListController extends Controller {
             $poslodavac = Employer::Query($q);
             $ime =  $poslodavac[0]->firstname;
             $id = $poslodavac[0]->id;
-<<<<<<< HEAD
 
             //var_dump($poslovi[$i++]->title);
             $start = ($poslovi[$i]->activestart);
-            var_dump($start);
+            //var_dump($start);
             //$start_plus_end = date_add($start, date_interval_create_from_date_string(($poslovi[$i]->activeend).'days'));;
 
             $start_plus_end = DateTime::createFromFormat($format, $start);
@@ -41,16 +40,19 @@ class ListController extends Controller {
             $i++;
 
 
-            var_dump($start_plus_end);
-            var_dump($cur_date);
+             
+           // var_dump($start_plus_end);
+           /* echo("\n\n");
+            */
+           // var_dump($cur_date);
 
-            if(true){
+
+            //POREDJENJE LOSE!
+            if($start_plus_end>$cur_date){
                 $sadrzaj .= Template::load('posao')->ime($ime)->posao($posao)->poslid($id)->get();
+                $posao->pricetype = $posao->pricetype==1?'RSD/dan':$posao->pricetype==2?'RSD/h':'RSD/kg';
             }
-=======
-            $posao->pricetype = $posao->pricetype==1?'RSD/dan':$posao->pricetype==2?'RSD/h':'RSD/kg';
-            $sadrzaj .= Template::load('posao-short')->ime($ime)->posao($posao)->poslid($id)->get();
->>>>>>> 7a73b04bf7800396ab2d3c338431a6223d307990
+
         }
 
         Template::load('base')
