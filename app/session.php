@@ -66,7 +66,7 @@ final class Session
         }
 
         $query =   'SELECT email, pass 
-                    FROM emplyer 
+                    FROM employer 
                     WHERE email=\''.$email.'\' 
                     AND pass=\''.sha1($password).'\'
                     AND active=1';

@@ -15,7 +15,7 @@
 	<body>
 		<header>
 			<h1>{title}</h1>
-			<div>
+			<div style="border: 1px solid green;">
 			[if logged]
 			    <a href="/user">Panel {korisnik}</a>
 			    <a href="/logout/">Izloguj se</a>
@@ -25,9 +25,11 @@
 			</div>
 		</header>
 
-		<a href="/login">login</a>
-		<a href="/logout">logout</a>
-		<a href="/register">reg</a>
+		<div style="border: 1px solid red;">
+			<a href="/login">login</a>
+			<a href="/logout">logout</a>
+			<a href="/register">reg</a>
+		</div>
 
 		[block content][end]
 

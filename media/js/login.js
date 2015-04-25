@@ -3,8 +3,8 @@ $(document).ready(function() {
     $( "#dugme_log" ).click(function() {
         
         $('#response_log').html("Login res: ");
-        var f_email = $('#mejl_login').val();
-        var f_pass = $('#pass_login').val();
+        var f_email = $('#email_log').val();
+        var f_pass = $('#password_log').val();
 
         $.ajax({
             method: "POST",
@@ -14,11 +14,12 @@ $(document).ready(function() {
         .done(function( msg ) {
             if(msg=='bad')
             {
-                $('#response_log').html("Pogresni podaci.");
+                $('#response_log').html('Losi podaci.');
             }
             else
             {
-                window.location.href = '/';
+                //window.location.href = '/';
+                $('#response_log').html('Dobri podaci.');
             }
             
         });
