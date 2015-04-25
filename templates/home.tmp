@@ -34,7 +34,7 @@
           <div class="col-sm-12 col-lg-5">
               <article>
                   <h2>BUDITE U TOKU<strong></strong></h2>
-                   <p class="thin">Obavestićemo Vas kada krenemo sa radom!</p>
+                   <p class="thin">Pretplatite se kako bi redovna obavestenja dospevala na was mail!</p>
               </article>
           </div>
           <div class="col-sm-12 col-lg-7">
@@ -55,32 +55,31 @@
         <div class="section-header animated hiding center" data-animation="fadeInDown">
           <h2>O PROJEKTU PAPRIKA</h2>
           <div class="sub-heading">
-            Lorem ipsum dolor sit atmet sit dolor greand fdanrh s
-            <br />dfs sit atmet sit dolor greand fdanrh sdfs
+            Imajuci u vidu da se u Srbiji ubrzano razvija IT sektor, ovaj servis je napravljen sa ciljem da se obezbede preduslovi za promovisanje poslovanja izmedju poljoprivrednih gazdinstava i sezonskih radnika, kako bi ostvarivanjem novih radnih odnosa poboljsali trenutnu, </br> a i dugorocnu, proizvodnju i prodaju.
           </div>
         </div>
         <div class="section-content row">
           <div class="col-sm-4">
             <article class="text-center animated hiding" data-animation="fadeInLeft" data-delay="0">
-              <i class="howitworks icon icon-shopping-04 icon-active"></i>
+              <i class="howitworks icon icon-shopping-26 icon-active"></i>
               <span class="h7">POLJOPRIVREDNICI</span>
-              <p class="thin" >Sit amet, consectetur adipiscing elit.<br />In hac divisione rem ipsam prorsus probo<br />elegantiam desidero.</p>
+              <p class="thin" >Poljoprivradnici, mala, i velika gazdinstva </br> imaju mogucnost postavljanja </br> neogranicenog broja malih oglasa</p>
             </article>
             <!--<span class="icon icon-arrows-04"></span>-->
           </div>
           <div class="col-sm-4">
             <article class="text-center animated hiding" data-animation="fadeInLeft" data-delay="400">
-              <i class="howitworks icon icon-seo-icons-03 icon-active"></i>
+              <i class="howitworks icon icon-seo-icons-14 icon-active"></i>
               <span class="h7">RADNICI</span>
-              <p class="thin" >Sit amet, consectetur adipiscing elit.<br />In hac divisione rem ipsam prorsus probo<br />elegantiam desidero.</p>
+              <p class="thin" >Nas servis nudi profesionalnu administraciju i spajanje radnika u potrazi za poslom sa odgovarajucim poljoprivradnim gazdinstvima</p>
             </article>
             <!--<span class="icon icon-arrows-04"></span>-->
           </div>
           <div class="col-sm-4">
             <article class="text-center animated hiding" data-animation="fadeInLeft" data-delay="800">
-              <i class="howitworks icon icon-seo-icons-05 icon-active"></i>
+              <i class="howitworks icon icon-seo-icons-31 icon-active"></i>
               <span class="h7">SEZONSKI POSLOVI</span>
-              <p class="thin" >Sit amet, consectetur adipiscing elit.<br />In hac divisione rem ipsam prorsus probo<br />elegantiam desidero.</p>
+              <p class="thin" >Na nasem servisu nudimo sirok spektar sezonskih poslova sa velikog broja okruga</p>
             </article>
           </div>
         </div>
@@ -95,38 +94,45 @@
         <div class="section-header animated hiding center" data-animation="fadeInDown">
           <h2>PAPRIKA SERVISI</h2>
           <div class="sub-heading">
-            Lorem ipsum dolor sit atmet sit dolor greand fdanrh s
-            <br />dfs sit atmet sit dolor greand fdanrh sdfs
+            Nakon uspesno obavljene registracije, clanovima internet servisa Paprika.rs se pruza mogucnost </br> da pristupe sekcijama za poljoprivrednike i radnike u kojojima je moguce:
+<!--
+- Međusobna interakcija članova
+- Pristupanje i formiranje poslovnih odnosa
+- Pokretanje i učestvovanje u DISKUSIJAMA (o proizvodnji, novim tehnologijama, načinima prodaje itd.)
+- Pokretanje DOGAĐAJA (virtuelnih seminara, sajmova, rasprodaja, itd.)
+
+- Pratiti aktivnosti drugih članova, prijatelja, grupa, događaja itd.
+- Kontaktirati KONSULTANTE iz raznih oblasti-->
           </div>
         </div>
 
         <div class="container animated hiding" data-animation="fadeInDown">
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <article class="center">
-          <i class="icon icon-office-44 icon-active"></i>
-                    <span class="h7">FEATURE 1</span>
-                    <p class="thin">Sit amet, consectetur adipiscing elit. In hac divisione rem ipsam prorsus probo elegantiam desidero. </p>
+          <i class="icon icon-office-21 icon-active"></i>
+                    <span class="h7">Detaljan pregled</span>
+                    <p class="thin">Nudimo detaljan pregled svih aktuelnih poslova, kao i reputacije gazdinstava i radnika</p>
                 </article>
             </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
                 <article class="center">
-          <i class="icon icon-shopping-18 icon-active"></i>
-                    <span class="h7">FEATURE 2</span>
-                    <p class="thin">Sit amet, consectetur adipiscing elit. In hac divisione rem ipsam prorsus probo elegantiam desidero. </p>
+          <i class="icon icon-seo-icons-21 icon-active"></i>
+                    <span class="h7">Notifikacije</span>
+                    <p class="thin">Budite uvek u toku Vasih trenutnih i buducih poslovnih odnosa kroz nas sistem notifikacija</p>
                 </article>
             </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
                 <article class="center">
           <i class="icon icon-seo-icons-27 icon-active"></i>
-                    <span class="h7">FEATURE 3</span>
-                    <p class="thin">Sit amet, consectetur adipiscing elit. In hac divisione rem ipsam prorsus probo elegantiam desidero. </p>
+                    <span class="h7">Lakoca upotrebe</span>
+                    <p class="thin">Nas servis je jednostavan, intuitivan i potpuno prilagodjen Vama</p>
                 </article>
             </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
                 <article class="center">
           <i class="icon icon-office-24 icon-active"></i>
-                    <span class="h7">FEATURE 4</span>
-                    <p class="thin">Sit amet, consectetur adipiscing elit. In hac divisione rem ipsam prorsus probo elegantiam desidero. </p>
+                    <span class="h7">U svako doba dana</span>
+                    <p class="thin">Dostupnost u bilo koje doba dana i noci Vam omogucava visok nivo lagodnosti i pristupa servisu</p>
                 </article>
             </div>
         </div>
@@ -139,8 +145,10 @@
                     <div class="logo-wrapper">
                         <img src="media/img/logo.png" alt="logo" />
                     </div>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco. Qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Nisi ut aliquid ex ea commodi consequatur?</p>
-                    <p><strong>Dragan Okanović, CTO</strong>.</p>
+                    <p>Imajući u vidu da se u Srbiji ubrzano razvija IT sektor, sa ciljem da se obezbede preduslovi za promovisanje poslovanja porodičnih poljoprivrednih gazdinstava, kako bi nalaženjem novih radnih odnosa poboljšali trenutnu proizvodnju i prodaju.
+
+Jedan od ciljeva portala je da se vlasnici porodičnih poljoprivrednih gazdinstava u Srbiji, članovi portala, klijenti i radnici, promovišu, međusobno upoznaju, organizuju poslovnog interesovanja,  poboljšaju prodaju svojih poljoprivrednih proizvoda.</p>
+                    <p><strong>Dragan Okanovic, CTO</strong>.</p>
                 </div>
                 <div class="col-sm-5 social-wrap">
 
@@ -164,7 +172,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright">Paprika.rs 2015. Sva prava zadržana.</div>
+        <div class="copyright">© Paprika.rs 2015. Sva prava zadrzana.</div>
     </footer>
 
     <div class="back-to-top"><i class="fa fa-angle-up fa-3x"></i></div>
