@@ -13,7 +13,7 @@ class IndexController extends Controller {
             ->korisnik($korisnik)
             ->content
             (
-                '<p>Ovo je <a href="/">glavna</a> strana.</p>'
+                Template::load('home') -> get()
             )
             ->render();
     }

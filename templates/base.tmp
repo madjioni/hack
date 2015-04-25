@@ -2,34 +2,88 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="description" content="">
+    <meta name="keywords" content="">
 
 		<title>{title}</title>
 
-		<!-- <link rel="shortcut icon" href="{CONFIG_WEBSITE}/{CONFIG_IMG_DIR}/favicon.png" type="image/x-icon">
-		<link rel="icon" href="{CONFIG_WEBSITE}/{CONFIG_IMG_DIR}/favicon.png" type="image/x-icon"> -->
-		<link rel="stylesheet" href="{CONFIG_CSS_DIR}/[block css]style.css[end]">
+		<!-- <link rel="shortcut icon" href="media/img/favicon.ico"> -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{CONFIG_CSS_DIR}/bootstrap.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="{CONFIG_CSS_DIR}/font-awesome.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="{CONFIG_CSS_DIR}/font-lineicons.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="{CONFIG_CSS_DIR}/animate.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="{CONFIG_CSS_DIR}/toastr.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="{CONFIG_CSS_DIR}/style.css" type="text/css" media="all" />
 
-		<script type="text/javascript" src="{CONFIG_JS_DIR}/jquery.js"></script>
 	</head>
-	
+
 	<body>
-		<header>
-			<h1>{title}</h1>
-			<div style="border: 1px solid green;">
-			[if logged]
-			    <a href="/user">Panel {korisnik}</a>
-			    <a href="/logout/">Izloguj se</a>
-			[else]
-				<a href="/register">register</a>
-			    <a href="/login">Login</a>
-			[end]
-			</div>
-		</header>
+		  <!-- Preloader -->
+  <div id="mask">
+      <div id="loader"></div>
+  </div>
+
+  <header>
+    <nav class="navigation navigation-header">
+      <div class="container">
+        <div class="navigation-brand">
+          <div class="brand-logo">
+  					<a href="#" class="logo"></a>
+ 					  <span class="sr-only">paprika.rs</span>
+          </div>
+          <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown" data-target=".navigation-navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navigation-navbar">
+          <ul class="navigation-bar navigation-bar-left">
+            <li class="active"><a href="#home">Početna</a></li>
+            <li><a href="jobs.html">Poslovi</a></li>
+            <li><a href="#about">O Projektu</a></li>
+            <li><a href="#features">Usluge</a></li>
+            <li><a href="#newsletter">Subscribe</a></li>
+          </ul>
+          <ul class="navigation-bar navigation-bar-right">
+  				[if logged]
+					  <li class="featured"><a href="/user">Panel {korisnik}</a></li>
+					  <li><a href="/logout/">Izloguj se</a></li>
+					[else]
+						<li><a href="/login">Uloguj se</a></li>
+						<li class="featured"><a href="/register">Registracija</a></li>
+					[end]
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
 
 		[block content][end]
 
 		[block footer][end]
 
-		[block script][end]
+		[block script]
+    <script type="text/javascript" src="{CONFIG_JS_DIR}/jquery-2.1.0.min.js?ver=1"></script>
+    <script type="text/javascript" src="{CONFIG_JS_DIR}/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{CONFIG_JS_DIR}/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="{CONFIG_JS_DIR}/jquery.nav.js"></script>
+    <script type="text/javascript" src="{CONFIG_JS_DIR}/jquery.appear.js"></script>
+    <script type="text/javascript" src="{CONFIG_JS_DIR}/jquery.plugin.js"></script>
+    <script type="text/javascript" src="{CONFIG_JS_DIR}/jquery.countdown.js"></script>
+    <script type="text/javascript" src="{CONFIG_JS_DIR}/waypoints.min.js"></script>
+    <script type="text/javascript" src="{CONFIG_JS_DIR}/waypoints-sticky.min.js"></script>
+    <script type="text/javascript" src="{CONFIG_JS_DIR}/jquery.validate.js"></script>
+    <script type="text/javascript" src="{CONFIG_JS_DIR}/toastr.min.js"></script>
+    <script type="text/javascript" src="{CONFIG_JS_DIR}/headhesive.min.js"></script>
+    <script type="text/javascript" src="media/mailchimp/js/mailing-list.js"></script>
+    <script type="text/javascript" src="{CONFIG_JS_DIR}/scripts.js"></script>
+
+		[end]
 	</body>
 </html>
