@@ -21,13 +21,21 @@ class JobController extends Controller {
         $poslodavac = null;
         $posao = null;
 
+        // dohvatanje posla
+        $posao = Job::Query("SELECT * FROM job WHERE id=$job_id");
+        $posao = $posao[0];
+
+        // dohvatanje poslodavca
+        $poslodavac = Employer::Query("SELECT * FROM employer WHERE id=".$posao->idemployer);
+        $poslodavac = $poslodavac[0];
+
+        // dohvatanje onoga ko pregleda stranicu
         if(!$logged)
         {
             $opcija_prva = true;
         }
         else
         {
-            // dohvatanje onoga ko pregleda stranicu
             $tbname = Session::GetData()['type'];
             if($tbname=='worker')
             {
@@ -39,15 +47,6 @@ class JobController extends Controller {
                 $user = Employer::Query("SELECT * FROM employer WHERE mail='$korisnik'");
                 $user = $user[0];
             }
-
-            // dohvatanje posla
-            $posao = Job::Query("SELECT * FROM job WHERE id=$job_id");
-            $posao = $posao[0];
-
-            // dohvatanje poslodavca
-            $poslodavac = Employer::Query("SELECT * FROM employer WHERE id=".$posao->idemployer);
-            $poslodavac = $poslodavac[0];
-
 
 
             // odlucivanje za prikaz
