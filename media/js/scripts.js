@@ -117,7 +117,7 @@
         layout      : $('.countdown').html()
     });
 
- //    // Form validation - sign up
+    // Form validation - sign up
 	// toastr.options = {"positionClass": "toast-top-full-width"};
  //    if( $('.form-register').length ) {
  //      $('.form-register').validate({
@@ -165,6 +165,6 @@
  //      });
  //    }
 
- //  });
+  });
 
 })();
