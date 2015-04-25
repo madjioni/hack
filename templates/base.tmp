@@ -20,16 +20,11 @@
 			    <a href="/user">Panel {korisnik}</a>
 			    <a href="/logout/">Izloguj se</a>
 			[else]
+				<a href="/register"></a>
 			    <a href="/login">Login</a>
 			[end]
 			</div>
 		</header>
-
-		<div style="border: 1px solid red;">
-			<a href="/login">login</a>
-			<a href="/logout">logout</a>
-			<a href="/register">reg</a>
-		</div>
 
 		[block content][end]
 
