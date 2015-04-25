@@ -1,0 +1,171 @@
+  <div id="home" class="static-header light clearfix">
+      <div class="text-heading">
+          <h1 class="animated hiding" data-animation="bounceInDown" data-delay="0">OGLASNIK <span class="highlight">POLJOPRIVREDNIH</span> POSLOVA</h1>
+          <p class="animated hiding" data-animation="fadeInDown" data-delay="500">Oglasnik sezonskih poslova u poljoprivredi</p>
+          <ul class="list-inline">
+              <li><a href="register.html" class="btn btn-primary animated hiding" data-animation="bounceIn" data-delay="700">Registruj se</a></li>
+              <li><a href="#" class="btn btn-default animated hiding" data-animation="bounceIn" data-delay="900">O paprika.rs </a></li>
+          </ul>
+      </div>
+      <!-- <div class="video-wrapper">
+          <div class="container">
+              <img src="media/img/features/app_block.png" alt="video" class="img-responsive animated hiding" data-animation="bounceInUp" data-delay="1000" />
+          </div>
+      </div> -->
+  </div>
+
+  <a id="showHere"></a>
+
+  <section id="blog" class="section dark">
+      <div class="container">
+          <div class="section-header animated hiding" data-animation="fadeInDown">
+              <h2><span class="highlight">PAPRIKA</span> OGLASI</h2>
+              <div class="sub-heading">
+                  Lorem ipsum dolor sit atmet sit dolor greand fdanrh s
+                  <br />dfs sit atmet sit dolor greand fdanrh sdfs
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section id="newsletter" class="long-block light">
+      <div class="container center">
+          <div class="col-sm-12 col-lg-5">
+              <article>
+                  <h2>BUDITE U TOKU<strong></strong></h2>
+                   <p class="thin">Obavestićemo Vas kada krenemo sa radom!</p>
+              </article>
+          </div>
+          <div class="col-sm-12 col-lg-7">
+              <form id="subscribe" class="form" action="/demo/startuply/index-main.html" method="post">
+                  <div class="form-group form-inline">
+                    <input size="15" type="text" class="form-control required" id="NewsletterName" name="NewsletterName" placeholder="Ime" />
+                    <input size="25" type="email" class="form-control required" id="NewsletterEmail" name="NewsletterEmail" placeholder="adresa@email.com" />
+                    <input type="submit" class="btn btn-default" value="PRETPLATITE SE" />
+                    <span id="response"></span>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </section>
+
+
+  <section id="about" class="section dark">
+      <div class="container">
+        <div class="section-header animated hiding center" data-animation="fadeInDown">
+          <h2>O PROJEKTU PAPRIKA</h2>
+          <div class="sub-heading">
+            Lorem ipsum dolor sit atmet sit dolor greand fdanrh s
+            <br />dfs sit atmet sit dolor greand fdanrh sdfs
+          </div>
+        </div>
+        <div class="section-content row">
+          <div class="col-sm-4">
+            <article class="text-center animated hiding" data-animation="fadeInLeft" data-delay="0">
+              <i class="howitworks icon icon-shopping-04 icon-active"></i>
+              <span class="h7">POLJOPRIVREDNICI</span>
+              <p class="thin" >Sit amet, consectetur adipiscing elit.<br />In hac divisione rem ipsam prorsus probo<br />elegantiam desidero.</p>
+            </article>
+            <!--<span class="icon icon-arrows-04"></span>-->
+          </div>
+          <div class="col-sm-4">
+            <article class="text-center animated hiding" data-animation="fadeInLeft" data-delay="400">
+              <i class="howitworks icon icon-seo-icons-03 icon-active"></i>
+              <span class="h7">RADNICI</span>
+              <p class="thin" >Sit amet, consectetur adipiscing elit.<br />In hac divisione rem ipsam prorsus probo<br />elegantiam desidero.</p>
+            </article>
+            <!--<span class="icon icon-arrows-04"></span>-->
+          </div>
+          <div class="col-sm-4">
+            <article class="text-center animated hiding" data-animation="fadeInLeft" data-delay="800">
+              <i class="howitworks icon icon-seo-icons-05 icon-active"></i>
+              <span class="h7">SEZONSKI POSLOVI</span>
+              <p class="thin" >Sit amet, consectetur adipiscing elit.<br />In hac divisione rem ipsam prorsus probo<br />elegantiam desidero.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+  </section>
+
+  <hr class="no-margin" />
+
+  <section id="features-list" class="section dark">
+        <div class="section-header animated hiding center" data-animation="fadeInDown">
+          <h2>PAPRIKA SERVISI</h2>
+          <div class="sub-heading">
+            Lorem ipsum dolor sit atmet sit dolor greand fdanrh s
+            <br />dfs sit atmet sit dolor greand fdanrh sdfs
+          </div>
+        </div>
+
+        <div class="container animated hiding" data-animation="fadeInDown">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="center">
+          <i class="icon icon-office-44 icon-active"></i>
+                    <span class="h7">FEATURE 1</span>
+                    <p class="thin">Sit amet, consectetur adipiscing elit. In hac divisione rem ipsam prorsus probo elegantiam desidero. </p>
+                </article>
+            </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="center">
+          <i class="icon icon-shopping-18 icon-active"></i>
+                    <span class="h7">FEATURE 2</span>
+                    <p class="thin">Sit amet, consectetur adipiscing elit. In hac divisione rem ipsam prorsus probo elegantiam desidero. </p>
+                </article>
+            </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="center">
+          <i class="icon icon-seo-icons-27 icon-active"></i>
+                    <span class="h7">FEATURE 3</span>
+                    <p class="thin">Sit amet, consectetur adipiscing elit. In hac divisione rem ipsam prorsus probo elegantiam desidero. </p>
+                </article>
+            </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+                <article class="center">
+          <i class="icon icon-office-24 icon-active"></i>
+                    <span class="h7">FEATURE 4</span>
+                    <p class="thin">Sit amet, consectetur adipiscing elit. In hac divisione rem ipsam prorsus probo elegantiam desidero. </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer light">
+        <div class="container">
+            <div class="footer-content row">
+                <div class="col-sm-4">
+                    <div class="logo-wrapper">
+                        <img src="media/img/logo.png" alt="logo" />
+                    </div>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco. Qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Nisi ut aliquid ex ea commodi consequatur?</p>
+                    <p><strong>Dragan Okanović, CTO</strong>.</p>
+                </div>
+                <div class="col-sm-5 social-wrap">
+
+                </div>
+                <div class="col-sm-3">
+                    <div class="footer-title">Kontakt</div>
+                    <ul class="list-unstyled">
+                        <li>
+                            <span class="icon icon-chat-messages-14"></span>
+                            <a href="mailto:info@startup.ly">info@agrokom.rs</a>
+                        </li>
+                        <li>
+                            <span class="icon icon-seo-icons-34"></span>
+                            Ulica i broj, Beograd, Srbija
+                        </li>
+                        <li>
+                            <span class="icon icon-seo-icons-17"></span>
+                            1 - 234-456-7980
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">Paprika.rs 2015. Sva prava zadržana.</div>
+    </footer>
+
+    <div class="back-to-top"><i class="fa fa-angle-up fa-3x"></i></div>
+
