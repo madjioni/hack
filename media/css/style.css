@@ -1039,6 +1039,11 @@ article {
   min-height: 1155px;
   position: relative;
 }
+
+.static-header.small-header {
+  min-height: 300px;
+}
+
 .register-version .text-heading {
   padding-top: 20%;
 }
@@ -1816,7 +1821,7 @@ ol {
   color: #ababab;
   font-weight: 300;
   padding: 0px 0px 30px 0px;
-  background-position-y: -150%;
+  background-position-y: -100%;
 }
 .footer p,
 .footer li {
@@ -2529,9 +2534,6 @@ ol {
   }
   .navigation-header .navigation-bar > li {
     padding: 15px 5px;
-  }
-  #landing-page .plain-version.static-header {
-    min-height: 460px;
   }
   #color-landing-page .static-header {
     min-height: 770px;
