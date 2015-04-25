@@ -41,7 +41,7 @@
 
     [if trece]
     <p>
-        Poslodavac: <a href="/user/id/{poslid}">{poslime}</a>
+        Poslodavac: <a href="/user/id/{poslodavac.id}">{poslodavac.firstname}</a>
         Naziv: {posao.title} <br>
         Lokacija: {posao.location} <br>
         Datum: {posao.datestart} - {posao.dateend} <br>
