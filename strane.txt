@@ -9,6 +9,10 @@ pregled poslova
 
 index.php - pocetna stranica
 registration.php - stranica za registraciju, zajednicka za employer/worker, dve forme samo
+login.php - login
+
+
+
 user.php - stranica za menjanje svoji settingsa i pregled licnih poslova (datih oglasa i oglasa za koje si prijavljen ako si emplyer odnosno worker; prikazuje i prosle poslove) istu stranicu otvara vise usera za sebe i razlicite korisnike
 createjob.php - stranica za pravljenje oglasa
 list.php - listanje poslova
