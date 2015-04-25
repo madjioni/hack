@@ -1,0 +1,137 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.10.7
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Apr 25, 2015 at 05:01 PM
+-- Server version: 5.5.42-cll
+-- PHP Version: 5.4.23
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `madjioni_hack_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `apps`
+--
+
+CREATE TABLE IF NOT EXISTS `apps` (
+  `idemployer` int(11) NOT NULL,
+  `idworker` int(11) NOT NULL,
+  `ewdone` tinyint(1) NOT NULL,
+  `ewcomm` varchar(200) NOT NULL,
+  `ewrate` int(11) NOT NULL,
+  `wedone` tinyint(1) NOT NULL,
+  `wecomm` varchar(200) NOT NULL,
+  `werate` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE IF NOT EXISTS `category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(60) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `employer`
+--
+
+CREATE TABLE IF NOT EXISTS `employer` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(60) NOT NULL,
+  `lastname` varchar(60) NOT NULL,
+  `location` varchar(60) NOT NULL,
+  `mail` varchar(100) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `description` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `job`
+--
+
+CREATE TABLE IF NOT EXISTS `job` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(60) NOT NULL,
+  `description` varchar(400) NOT NULL,
+  `location` varchar(60) NOT NULL,
+  `datestart` date NOT NULL,
+  `dateend` date NOT NULL,
+  `num` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  `pricetype` int(11) NOT NULL,
+  `time` int(11) NOT NULL,
+  `transportation` varchar(250) NOT NULL,
+  `activestart` date NOT NULL,
+  `activeend` date NOT NULL,
+  `idemployer` int(11) NOT NULL,
+  `idcat` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(60) NOT NULL,
+  `pass` varchar(60) NOT NULL,
+  `active` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `pass`, `active`) VALUES
+(17, 'dragan.okan@gmail.com', '75cc60a19bef263497ed044d00c19ba52352bf7d', 1),
+(18, 'dragan.okan@gmail.com', 'd8edc1b495654672c0e3cafa973002941925e355', 1),
+(19, 'dragan.okan@gmail.com', 'd8edc1b495654672c0e3cafa973002941925e355', 1),
+(20, 'dariomirovic@gmail.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `worker`
+--
+
+CREATE TABLE IF NOT EXISTS `worker` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(60) NOT NULL,
+  `lastname` varchar(60) NOT NULL,
+  `location` varchar(60) NOT NULL,
+  `mail` varchar(60) NOT NULL,
+  `gender` varchar(1) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
