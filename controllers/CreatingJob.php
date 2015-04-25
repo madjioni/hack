@@ -16,6 +16,7 @@ class CreatingJobController extends Controller {
         $price_type=Request::POST('price_type');
         $time=Request::POST('time');
         $transport=Request::POST('transport');
+        $active_end = Request::POST('active_end');
         $category=Request::POST('category');
 
 
@@ -52,7 +53,7 @@ class CreatingJobController extends Controller {
                         var_dump($transport);
 
 
-            $res = DB::Query("INSERT INTO job VALUES (0, '$title', '$description', '$location', '$date_start', '$date_end', '$num', $price , $price_type, $time,'$transport',0,7,".$empl_res[0][0].",$category)");
+            $res = DB::Query("INSERT INTO job(id, title, description, location, datestart, dateend, num, price, pricetype, time, transportation, activeend, idemployer, idcat) VALUES (0, '$title', '$description', '$location', '$date_start', '$date_end', '$num', $price , $price_type, $time,'$transport',$active_end,".$empl_res[0][0].",$category)");
 
 /*
 
