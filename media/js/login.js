@@ -18,8 +18,8 @@ $(document).ready(function() {
             }
             else
             {
-                //window.location.href = '/';
-                $('#response_log').html('Dobri podaci.');
+                window.location.href = '/';
+                //$('#response_log').html('Dobri podaci.');
             }
             
         });

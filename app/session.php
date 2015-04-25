@@ -48,9 +48,9 @@ final class Session
     */
     public static function Login($email, $password)
     {
-        $query =   'SELECT email, pass 
+        $query =   'SELECT mail, pass 
                     FROM worker 
-                    WHERE email=\''.$email.'\' 
+                    WHERE mail=\''.$email.'\' 
                     AND pass=\''.sha1($password).'\'
                     AND active=1';
 
@@ -65,9 +65,9 @@ final class Session
             return true;
         }
 
-        $query =   'SELECT email, pass 
+        $query =   'SELECT mail, pass 
                     FROM employer 
-                    WHERE email=\''.$email.'\' 
+                    WHERE mail=\''.$email.'\' 
                     AND pass=\''.sha1($password).'\'
                     AND active=1';
 

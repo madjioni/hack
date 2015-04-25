@@ -9,6 +9,8 @@ class IndexController extends Controller {
 
         Template::load('base')
             ->title('Home')
+            ->logged($logged)
+            ->korisnik($korisnik)
             ->content
             (
                 '<p>Ovo je <a href="/">glavna</a> strana.</p>'
