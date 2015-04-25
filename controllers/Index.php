@@ -14,12 +14,6 @@ class IndexController extends Controller {
             ->content
             (
                 '<p>Ovo je <a href="/">glavna</a> strana.</p>'
-                // . Template::load('login_form')
-                //     ->korisnik($korisnik)
-                //     ->logged($logged)
-                //     ->get()
-                // . Template::load('upload_form')
-                //     ->get()
             )
             ->render();
     }
