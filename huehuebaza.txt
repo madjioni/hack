@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 25, 2015 at 05:15 PM
+-- Generation Time: Apr 25, 2015 at 05:18 PM
 -- Server version: 5.5.42-cll
 -- PHP Version: 5.4.23
 
@@ -61,6 +61,7 @@ CREATE TABLE IF NOT EXISTS `employer` (
   `lastname` varchar(60) NOT NULL,
   `location` varchar(60) NOT NULL,
   `mail` varchar(100) NOT NULL,
+  `pass` varchar(60) NOT NULL,
   `phone` varchar(20) NOT NULL,
   `description` varchar(500) NOT NULL,
   PRIMARY KEY (`id`)
@@ -127,6 +128,7 @@ CREATE TABLE IF NOT EXISTS `worker` (
   `lastname` varchar(60) NOT NULL,
   `location` varchar(60) NOT NULL,
   `mail` varchar(60) NOT NULL,
+  `pass` varchar(60) NOT NULL,
   `gender` tinyint(1) NOT NULL,
   `age` int(11) NOT NULL,
   `phone` varchar(20) NOT NULL,
