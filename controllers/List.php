@@ -34,8 +34,8 @@ class ListController extends Controller {
 
             if($start+$diff > $now)
             {
-                $sadrzaj .= Template::load('posao-short')->ime($ime)->posao($posao)->poslid($id)->get();
                 $posao->pricetype = $posao->pricetype==1?'RSD/dan':$posao->pricetype==2?'RSD/h':'RSD/kg';
+                $sadrzaj .= Template::load('posao-short')->ime($ime)->posao($posao)->poslid($id)->get();
             }
 
         }
