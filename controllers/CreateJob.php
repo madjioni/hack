@@ -11,16 +11,22 @@ class CreateJobController extends Controller {
         // var_dump($logged);
         // var_dump($korisnik);
 
-        Template::load('base')
-            ->title('Oglasi posao')
-            ->logged($logged)
-            ->korisnik($korisnik)
-            ->content
-            (
-                Template::load('create_job_form')
-                    ->get()
-            )
-        ->render();
-
+        if($logged && Session::GetData()['type']=='employer')
+        {
+            Template::load('base')
+                ->title('Oglasi posao')
+                ->logged($logged)
+                ->korisnik($korisnik)
+                ->content
+                (
+                    Template::load('create_job_form')
+                        ->get()
+                )
+            ->render();
+        }
+        else
+        {
+            Request::GotoAddress('/');
+        }
     }
 }
