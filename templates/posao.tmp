@@ -1,0 +1,15 @@
+
+<div class="post" style="border: 1px solid red;">
+    <p>
+        Poslodavac: <a href="/user/id/{poslid}">{ime}</a>
+        Naziv: {posao.title} <br>
+        Lokacija: {posao.location} <br>
+        Datum: {posao.datestart} - {posao.dateend} <br>
+        Broj radnika: {posao.num} <br>
+        Plata: {posao.price} ({posao.pricetype}) <br>
+        Radno vreme: {posao.time} <br>
+        Transport: {posao.transportation} <br>
+        Opis: {posao.description} <br>
+        <a href="/job/id/{posao.id}">Pogledaj vise o poslu</a>
+    </p>
+</div>
