@@ -26,32 +26,32 @@ class ListController extends Controller {
             $ime =  $poslodavac[0]->firstname;
             $id = $poslodavac[0]->id;
 
-            //var_dump($poslovi[$i++]->title);
-            $start = ($poslovi[$i]->activestart);
-            //var_dump($start);
-            //$start_plus_end = date_add($start, date_interval_create_from_date_string(($poslovi[$i]->activeend).'days'));;
+           //  //var_dump($poslovi[$i++]->title);
+           //  $start = ($poslovi[$i]->activestart);
+           //  //var_dump($start);
+           //  //$start_plus_end = date_add($start, date_interval_create_from_date_string(($poslovi[$i]->activeend).'days'));;
 
-            $start_plus_end = DateTime::createFromFormat($format, $start);
+           //  $start_plus_end = DateTime::createFromFormat($format, $start);
 
-           //var_dump($start_plus_end);
-           // var_dump($poslovi[$i]->activeend);
-            $start_plus_end->modify('+'.$poslovi[$i]->activeend.' days');
-           // var_dump($start_plus_end);
-            $i++;
+           // //var_dump($start_plus_end);
+           // // var_dump($poslovi[$i]->activeend);
+           //  $start_plus_end->modify('+'.$poslovi[$i]->activeend.' days');
+           // // var_dump($start_plus_end);
+           //  $i++;
 
 
              
-           // var_dump($start_plus_end);
-           /* echo("\n\n");
-            */
-           // var_dump($cur_date);
+           // // var_dump($start_plus_end);
+           // /* echo("\n\n");
+           //  */
+           // // var_dump($cur_date);
 
 
-            //POREDJENJE LOSE!
-            if($start_plus_end>$cur_date){
+           //  //POREDJENJE LOSE!
+           //  if($start_plus_end>$cur_date){
                 $sadrzaj .= Template::load('posao')->ime($ime)->posao($posao)->poslid($id)->get();
                 $posao->pricetype = $posao->pricetype==1?'RSD/dan':$posao->pricetype==2?'RSD/h':'RSD/kg';
-            }
+            // }
 
         }
 
