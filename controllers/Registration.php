@@ -31,7 +31,7 @@ class RegistrationController extends Controller {
             $phone = Request::POST('phone_rfw');
             $age = Request::POST('age_rfw');
             $gender = Request::POST('gender_rfw');
-            $res = DB::Query("INSERT INTO worker VALUES (0, '$firstname', '$lastname', '$location', '$email', '$pass', ".($gender=='m'?1:0).", $age, '$phone', 0)");
+            $res = DB::Query("INSERT INTO worker VALUES (0, '$firstname', '$lastname', '$location', '$email', '$pass', 1, $age, '$phone', 0)");
         }
 
         if( $res )
@@ -51,6 +51,6 @@ class RegistrationController extends Controller {
             //mail($to, $subject, $message, $headers);
         }
 
-        echo $res!=null?'good':'bad';
+        echo $res;
     }
 }
