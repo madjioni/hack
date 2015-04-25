@@ -1,0 +1,8 @@
+<div class="single-job">
+    <a href="/job/id/{posao.id}">
+    <p class="title">{posao.title} </p>
+    <p class="location">Lokacija: {posao.location}</p>
+    <p class="payment">{posao.price} {posao.pricetype}</p>
+
+    </a>
+</div>

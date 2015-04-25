@@ -42,11 +42,11 @@
         </div>
         <div class="navigation-navbar">
           <ul class="navigation-bar navigation-bar-left">
-            <li class="active"><a href="#home">Početna</a></li>
-            <li><a href="/jobs">Poslovi</a></li>
-            <li><a href="#about">O Projektu</a></li>
-            <li><a href="#features">Usluge</a></li>
-            <li><a href="#newsletter">Subscribe</a></li>
+            <li><a href="/home">Početna</a></li>
+            <li><a href="/list">Poslovi</a></li>
+            <li><a href="/home#newsletter">Subscribe</a></li>
+            <li><a href="/home#about">O Projektu</a></li>
+            <li><a href="/home#features-list">Usluge</a></li>
           </ul>
           <ul class="navigation-bar navigation-bar-right">
   				[if logged]

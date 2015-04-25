@@ -15,12 +15,12 @@ $(document).ready(function() {
             if(msg=='bad')
             {
                 $('#response_log').html('Losi podaci.');
-            }
-            else
+                window.location.href = 'login';
+            } else
             {
                 window.location.href = '/';
-                //$('#response_log').html('Dobri podaci.');
             }
+
 
         });
 

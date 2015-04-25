@@ -1,5 +1,4 @@
-
-<div class="post" style="border: 1px solid red;">
+<div class="post">
     <p>
         Poslodavac: <a href="/user/id/{poslid}">{ime}</a>
         Naziv: {posao.title} <br>
