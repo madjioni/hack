@@ -2,43 +2,44 @@
 
 <form name="form_cj" action="/CreatingJob" method="POST">
     <h4>Oglasite posao</h4>
-    <!-- title -->
+    title : <br>
     <input type="text" name="title"><br/>
-    <!-- description -->
+    description : <br>
     <textarea name="description"></textarea><br/>
-    <!-- location -->
+    location : <br>
     <input type="text" name="location"> <br/>
-    <!-- datestart -->
+    datestart : <br>
     <input type="date" name="date_start" ><br/>
-    <!-- dateend -->
+    dateend : <br>
     <input type="date" name="date_end" ><br/>
 
-    <!-- num //broj ljudi -->
+     num //broj ljudi : <br>
     <input type="number" name="num" min="1" max="100"><br/>
 
-    <!-- price -->
+     price : <br>
     <input type="text" name="price"><br/>
 
-    <!-- price type -->
-    <select name="price_type"><br>
+     price type : <br>
+    <select name="price_type">
         <option value="1">po satu</option>
         <option value="2">po danu</option>
         <option value="3">po zavrsenom poslu</option>
 
     </select> <br>
 
-    <!-- time //doba dana -->
+     time //doba dana : <br>
     <input type="text" name="time"><br/>
 
 
 
-    <!-- transport  -->transport?
+     transport : <br>
     <input type="text" name="transport"> <br>
 
 
-    <!-- activestart  -->
-    <!-- activeend -->
-    <!-- kategorija //selection -->
+
+     Duzina trajanja oglasa (u danima) : <br>
+    <input type="number" name="active_end" min="1" max="30" value="7"><br/>
+     kategorija : <br> 
     <select name="category"><br>
         <option value="1">KOPAC</option>
         <option value="2">BERAC</option>
