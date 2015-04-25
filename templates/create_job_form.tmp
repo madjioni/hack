@@ -1,0 +1,57 @@
+<!-- sve da ide preko AJAX sa jQuery, mnogo je lepse i lakse, ili pak da ide preko forme -->
+
+<form name="form_cj" action="/CreatingJob" method="POST">
+    <h4>Oglasite posao</h4>
+    <!-- title -->
+    <input type="text" name="title"><br/>
+    <!-- description -->
+    <textarea name="description"></textarea><br/>
+    <!-- location -->
+    <input type="text" name="location"> <br/>
+    <!-- datestart -->
+    <input type="date" name="date_start" ><br/>
+    <!-- dateend -->
+    <input type="date" name="date_end" ><br/>
+
+    <!-- num //broj ljudi -->
+    <input type="number" name="num" min="1" max="100"><br/>
+
+    <!-- price -->
+    <input type="text" name="price"><br/>
+
+    <!-- price type -->
+       <select name="price_type"><br>
+        <option value="1">po satu</option>
+        <option value="2">po danu</option>
+                <option value="3">po zavrsenom poslu</option>
+
+    </select>
+
+    <!-- time //doba dana -->
+    <input type="text" name="time"><br/>
+
+
+
+    <!-- transport  -->transport?
+    <input type="checkbox" name="transport" value="trans"> <br>
+
+
+    <!-- activestart  -->
+    <!-- activeend -->
+    <!-- kategorija //selection -->
+    <select name="category"><br>
+        <option value="1">KOPAC</option>
+        <option value="2">BERAC</option>
+    </select>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+
+
+	<button type="submit" value="posao">Oglasi</button>
+</form>
+
