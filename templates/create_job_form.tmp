@@ -20,12 +20,12 @@
     <input type="text" name="price"><br/>
 
     <!-- price type -->
-       <select name="price_type"><br>
+    <select name="price_type"><br>
         <option value="1">po satu</option>
         <option value="2">po danu</option>
-                <option value="3">po zavrsenom poslu</option>
+        <option value="3">po zavrsenom poslu</option>
 
-    </select>
+    </select> <br>
 
     <!-- time //doba dana -->
     <input type="text" name="time"><br/>
@@ -33,7 +33,7 @@
 
 
     <!-- transport  -->transport?
-    <input type="checkbox" name="transport" value="trans"> <br>
+    <input type="text" name="transport"> <br>
 
 
     <!-- activestart  -->
