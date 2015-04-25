@@ -10,8 +10,13 @@ pregled poslova
 index.php - pocetna stranica
 registration.php - stranica za registraciju, zajednicka za employer/worker, dve forme samo
 login.php - login
-list.php - listanje poslova
 createjob.php - stranica za pravljenje oglasa
+
+list.php - listanje poslova TODO ne prikazivati ako nije aktivan, max dana TODO paginator
 
 user.php - stranica za menjanje svoji settingsa i pregled licnih poslova (datih oglasa i oglasa za koje si prijavljen ako si emplyer odnosno worker; prikazuje i prosle poslove) istu stranicu otvara vise usera za sebe i razlicite korisnike
 job.php - jedan posao
+
+TODO proveravanje da ne postoji isti mejl u bazi etc
+TODO popraviti login
+TODO ispraviti sitne budjave tekstove po login/registracija etc response_...

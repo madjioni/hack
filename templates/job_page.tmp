@@ -1,0 +1,40 @@
+<div>
+    <h4>Posao</h4>
+    [if prvo]
+    <p>
+        Poslodavac: <a href="/user/id/{poslid}">{poslime}</a>
+        Naziv: {posao.title} <br>
+        Lokacija: {posao.location} <br>
+        Datum: {posao.datestart} - {posao.dateend} <br>
+        Broj radnika: {posao.num} <br>
+        Plata: {posao.price} ({posao.pricetype}) <br>
+        Radno vreme: {posao.time} <br>
+        Transport: {posao.transportation} <br>
+        Opis: {posao.description} <br>
+        <a href="/job/id/{posao.id}">Pogledaj vise o poslu</a>
+    </p>
+    [end]
+
+    [if drugo]
+    
+    [end]
+
+    [if trece]
+    <p>
+        Poslodavac: <a href="/user/id/{poslid}">{poslime}</a>
+        Naziv: {posao.title} <br>
+        Lokacija: {posao.location} <br>
+        Datum: {posao.datestart} - {posao.dateend} <br>
+        Broj radnika: {posao.num} <br>
+        Plata: {posao.price} ({posao.pricetype}) <br>
+        Radno vreme: {posao.time} <br>
+        Transport: {posao.transportation} <br>
+        Opis: {posao.description} <br>
+        <a href="/job/id/{posao.id}">Pogledaj vise o poslu</a>
+    </p>
+    <div id="dugme_prijava">Prijavi se</div>
+    [end]
+
+</div>
+
+<script type="text/javascript" src="job_page.js"></script>
