@@ -10,14 +10,14 @@
 
 		<!-- <link rel="shortcut icon" href="media/img/favicon.ico"> -->
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{CONFIG_CSS_DIR}/bootstrap.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="{CONFIG_CSS_DIR}/font-awesome.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="{CONFIG_CSS_DIR}/font-lineicons.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="{CONFIG_CSS_DIR}/animate.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="{CONFIG_CSS_DIR}/toastr.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="{CONFIG_CSS_DIR}/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/bootstrap.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/font-awesome.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/font-lineicons.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/animate.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/toastr.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/style.css" type="text/css" media="all" />
 
-    <script type="text/javascript" src="{CONFIG_JS_DIR}/jquery.js"></script>
+    <script type="text/javascript" src="/{CONFIG_JS_DIR}/jquery.js"></script>
 	</head>
 
 	<body>
@@ -42,11 +42,11 @@
         </div>
         <div class="navigation-navbar">
           <ul class="navigation-bar navigation-bar-left">
-            <li class="active"><a href="#home">Početna</a></li>
-            <li><a href="/jobs">Poslovi</a></li>
-            <li><a href="#about">O Projektu</a></li>
-            <li><a href="#features">Usluge</a></li>
-            <li><a href="#newsletter">Subscribe</a></li>
+            <li><a href="/home">Početna</a></li>
+            <li><a href="/list">Poslovi</a></li>
+            <li><a href="/home#newsletter">Subscribe</a></li>
+            <li><a href="/home#about">O Projektu</a></li>
+            <li><a href="/home#features-list">Usluge</a></li>
           </ul>
           <ul class="navigation-bar navigation-bar-right">
   				[if logged]
@@ -70,18 +70,18 @@
 		[block footer][end]
 
 		[block script]
-    <script type="text/javascript" src="{CONFIG_JS_DIR}/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{CONFIG_JS_DIR}/jquery.flexslider-min.js"></script>
-    <script type="text/javascript" src="{CONFIG_JS_DIR}/jquery.nav.js"></script>
-    <script type="text/javascript" src="{CONFIG_JS_DIR}/jquery.appear.js"></script>
-    <script type="text/javascript" src="{CONFIG_JS_DIR}/jquery.plugin.js"></script>
-    <script type="text/javascript" src="{CONFIG_JS_DIR}/jquery.countdown.js"></script>
-    <script type="text/javascript" src="{CONFIG_JS_DIR}/waypoints.min.js"></script>
-    <script type="text/javascript" src="{CONFIG_JS_DIR}/waypoints-sticky.min.js"></script>
-    <script type="text/javascript" src="{CONFIG_JS_DIR}/jquery.validate.js"></script>
-    <script type="text/javascript" src="{CONFIG_JS_DIR}/toastr.min.js"></script>
-    <script type="text/javascript" src="{CONFIG_JS_DIR}/headhesive.min.js"></script>
-    <script type="text/javascript" src="{CONFIG_JS_DIR}/scripts.js"></script>
+    <script type="text/javascript" src="/{CONFIG_JS_DIR}/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/{CONFIG_JS_DIR}/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="/{CONFIG_JS_DIR}/jquery.nav.js"></script>
+    <script type="text/javascript" src="/{CONFIG_JS_DIR}/jquery.appear.js"></script>
+    <script type="text/javascript" src="/{CONFIG_JS_DIR}/jquery.plugin.js"></script>
+    <script type="text/javascript" src="/{CONFIG_JS_DIR}/jquery.countdown.js"></script>
+    <script type="text/javascript" src="/{CONFIG_JS_DIR}/waypoints.min.js"></script>
+    <script type="text/javascript" src="/{CONFIG_JS_DIR}/waypoints-sticky.min.js"></script>
+    <script type="text/javascript" src="/{CONFIG_JS_DIR}/jquery.validate.js"></script>
+    <script type="text/javascript" src="/{CONFIG_JS_DIR}/toastr.min.js"></script>
+    <script type="text/javascript" src="/{CONFIG_JS_DIR}/headhesive.min.js"></script>
+    <script type="text/javascript" src="/{CONFIG_JS_DIR}/scripts.js"></script>
 
 		[end]
 	</body>

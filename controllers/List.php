@@ -25,6 +25,7 @@ class ListController extends Controller {
             $poslodavac = Employer::Query($q);
             $ime =  $poslodavac[0]->firstname;
             $id = $poslodavac[0]->id;
+<<<<<<< HEAD
 
             //var_dump($poslovi[$i++]->title);
             $start = ($poslovi[$i]->activestart);
@@ -46,6 +47,10 @@ class ListController extends Controller {
             if(true){
                 $sadrzaj .= Template::load('posao')->ime($ime)->posao($posao)->poslid($id)->get();
             }
+=======
+            $posao->pricetype = $posao->pricetype==1?'RSD/dan':$posao->pricetype==2?'RSD/h':'RSD/kg';
+            $sadrzaj .= Template::load('posao-short')->ime($ime)->posao($posao)->poslid($id)->get();
+>>>>>>> 7a73b04bf7800396ab2d3c338431a6223d307990
         }
 
         Template::load('base')
@@ -54,8 +59,9 @@ class ListController extends Controller {
             ->korisnik($korisnik)
             ->content
             (
-                '<p>Ovo je stranica sa listom poslova.</p>'
-                . $sadrzaj
+                Template::load('list')
+                    ->sadrzaj($sadrzaj)
+                    ->get()
             )
             ->render();
     }

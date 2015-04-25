@@ -1,0 +1,20 @@
+    <div id="home" class="static-header light">
+        <div class="text-heading">
+            <h1>SEZONSKI POSLOVI</h1>
+        </div>
+    </div>
+
+    <a id="showHere"></a>
+
+    <section id="oglasi" class="section dark">
+  <div class="container">
+      <div class="section-header animated hiding" data-animation="fadeInDown">
+          <h2><span class="highlight">PAPRIKA</span> OGLASI</h2>
+          <div class="sub-heading">
+              Lorem ipsum dolor sit atmet sit dolor greand fdanrh s
+              <br />dfs sit atmet sit dolor greand fdanrh sdfs
+          </div>
+          <div>{sadrzaj} </div>
+      </div>
+  </div>
+    </section>

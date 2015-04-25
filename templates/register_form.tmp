@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
                     <div class="text-heading">
-                        <h1>Registracija <span class="highlight">radnika</span></h1>
+                        <h1>Registracija <span class="highlight">poslodavca</span></h1>
                     </div>
                     <form class="form form-register dark" name="form_rfe" action="/Registration/t/e" method="post">
                         <div class="form-group">
@@ -57,7 +57,7 @@
 
                 <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
                     <div class="text-heading">
-                        <h1>Registracija <span class="highlight">poslodavca</span></h1>
+                        <h1>Registracija <span class="highlight">radnika</span></h1>
                     </div>
                     <form class="form form-register dark" name="form_rfw" action="/Registration/t/w" method="post">
                         <div class="form-group">

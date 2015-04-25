@@ -1,0 +1,61 @@
+<div>
+    <h4>Posao</h4>
+    [if prvo]
+    <p>
+        Poslodavac: <a href="/user/id/{poslodavac.id}">{poslodavac.firstname}</a>
+        Naziv: {posao.title} <br>
+        Lokacija: {posao.location} <br>
+        Datum: {posao.datestart} - {posao.dateend} <br>
+        Broj radnika: {posao.num} <br>
+        Plata: {posao.price} ({posao.pricetype}) <br>
+        Radno vreme: {posao.time} <br>
+        Transport: {posao.transportation} <br>
+        Opis: {posao.description} <br>
+    </p>
+    [end]
+
+    [if drugo]
+        <input type="text" name="title" value="{posao.title}"><br/>
+        <textarea name="description">{posao.description}</textarea><br/>
+        <input type="text" name="location" value="{posao.location}"> <br/>
+        <input type="date" name="date_start" value="{posao.datestart}"><br/>
+        <input type="date" name="date_end" value=""><br/>
+        <input type="number" name="num" min="1" max="100" value=""><br/>
+        <input type="text" name="price" value=""><br/>
+        <select name="price_type"><br>
+            <option value="1">po satu</option>
+            <option value="2">po danu</option>
+            <option value="3">po zavrsenom poslu</option>
+        </select> <br>
+        <input type="text" name="time"><br/>
+        <input type="text" name="transport"> <br>
+        <select name="category"><br>
+            <option value="1">KOPAC</option>
+            <option value="2">BERAC</option>
+        </select>
+
+        <div id="dugme_izmeni">Sacuvaj izmene</div>
+
+        <!-- lista radnika -->
+    [end]
+
+    [if trece]
+    <p>
+        Poslodavac: <a href="/user/id/{poslodavac.id}">{poslodavac.firstname}</a>
+        Naziv: {posao.title} <br>
+        Lokacija: {posao.location} <br>
+        Datum: {posao.datestart} - {posao.dateend} <br>
+        Broj radnika: {posao.num} <br>
+        Plata: {posao.price} ({posao.pricetype}) <br>
+        Radno vreme: {posao.time} <br>
+        Transport: {posao.transportation} <br>
+        Opis: {posao.description} <br>
+    </p>
+
+    <!-- provera da li je prijavljen vec ili ne -->
+    <div id="dugme_prijava">prijava</div>
+    [end]
+
+</div>
+
+<!-- <script type="text/javascript" src="job_page.js"></script> -->
