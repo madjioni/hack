@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
-                    <form class="form form-register dark" id="registration" method="post" name="form_rfe" action="/Registration/t/e" method="POST">
+                    <form class="form form-register dark" id="registration">
                         <div class="form-group">
                             <label for="email" class="col-sm-3 col-xs-12 control-label">Email</label>
                             <div class="col-sm-9 col-xs-12">
@@ -22,7 +22,7 @@
                             </div>
                         </div>
 
-                        <button id="dugme_log" type="submit" class="btn btn-primary btn-lg btn-block">Uloguj se</button>
+                        <button id="dugme_log" class="btn btn-primary btn-lg btn-block">Uloguj se</button>
                         <div id="response_log">Login res: </div>
                     </form>
                 </div>
