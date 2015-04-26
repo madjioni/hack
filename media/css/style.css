@@ -781,6 +781,24 @@ article {
   padding-top: 125px;
 }
 
+.confirm-section {
+  background: url('/media/img/background/background.jpg') no-repeat center center;
+  height: 850px;
+}
+
+.confirm-section p {
+  text-align: center;
+  margin-top: 50px;
+  padding: 30px;
+  background: rgba(144, 16, 16, 0.7);
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  margin: 20% auto;
+  width: 50%;
+}
+
 /* Header versions */
 .plain-version .text-heading {
   padding-top: 15%;

@@ -35,7 +35,19 @@ class ConfirmController extends Controller {
             ->title('Confirmation')
             ->content
             (
-                $msg
+                '<div id="home" class="static-header small-header light">
+                    <div class="text-heading"></div>
+                </div>
+                <section class="confirm-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="response">'.$msg.'</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <a id="showHere"></a>'
             )
         ->render();
     }
