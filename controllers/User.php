@@ -24,6 +24,11 @@ require 'models/japp.php';
         $poslovi = array();
         $sadrzaj = '';
 
+        if(!$logged || $korisnik=='niko')
+        {
+            Request::GotoAddress('/');
+        }
+
 
         if($logged)
         {

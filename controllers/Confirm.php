@@ -4,6 +4,10 @@ class ConfirmController extends Controller {
 
     public function run()
     {
+
+        $logged = isset(Session::GetData()['email']);
+        $korisnik = $logged ? Session::GetData()['email'] : 'niko';
+
         $t = intval(Request::GET('t'));
         $msg = '';
         if($t==1)
@@ -32,7 +36,9 @@ class ConfirmController extends Controller {
         }
 
         Template::load('base')
-            ->title('Confirmation')
+            ->title('Paprika - Potvrda')
+            ->logged($logged)
+            ->korisnik($korisnik)
             ->content
             (
                 '<div id="home" class="static-confirm static-header light">
