@@ -53,6 +53,16 @@ class JobController extends Controller {
                 $user = $user[0];
             }
 
+            $now = date('m/d/Y h:i:s a', time());
+                    $unix_now = strtotime($now);
+
+                    $start = date('m/d/Y h:i:s a', strtotime($posao->activestart));
+                    $unix_start = strtotime($start);
+
+                    $diff = $posao->activeend * 24 * 60 * 60;
+
+                    $aktivan = ($unix_start+$diff > $unix_now);
+
 
             // odlucivanje za prikaz
             if($tbname=='employer')
@@ -72,15 +82,7 @@ class JobController extends Controller {
                     }
                     $radnici = $ws;
 
-                    $now = date('m/d/Y h:i:s a', time());
-                    $unix_now = strtotime($now);
-
-                    $start = date('m/d/Y h:i:s a', strtotime($posao->activestart));
-                    $unix_start = strtotime($start);
-
-                    $diff = $posao->activeend * 24 * 60 * 60;
-
-                    $aktivan = ($unix_start+$diff > $unix_now);
+                    
                 }
             }
 

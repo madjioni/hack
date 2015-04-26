@@ -168,7 +168,7 @@
     <section id="oglas" class="section dark">
         <div class="container">
             <div class="section-header animated hiding" data-animation="fadeInDown">
-               <h2>Oglas - <span class="highlight">{posao.title}</span></h2><a id="dugme_prijava" class="btn-apply">Prijavi se</a>
+               <h2>Oglas - <span class="highlight">{posao.title}</span></h2>[if aktivan]<a id="dugme_prijava" class="btn-apply">Prijavi se</a>[end]
                <p class="date"><a href="/user/id/{poslodavac.id}/t/e">Poslodavac: {poslodavac.firstname}</a>Datum: {posao.datestart} - {posao.dateend}</p>
                <div class="sub-heading description">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
