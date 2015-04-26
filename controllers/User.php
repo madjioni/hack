@@ -78,25 +78,25 @@ require 'models/japp.php';
                     $sadrzaj .= 'Rate: '.$tbnamev=='worker'?$posao->werate:$posao->ewrate . '<br>';
                     $sadrzaj .= 'Comm: '.$tbnamev=='worker'?$posao->wecomm:$posao->ewcomm . '<br>';
                 }
-                if($posao->wedone && $tbname=='worker')
+                if(!$posao->wedone && $tbname=='worker')
                 {
                     // TODO
                     $sadrzaj .=
                     '
-                    <form action="/potvrda/tip/we/id/'.$posao->idworker.'/poso/'.$posao->idjob->id.'" method="get">
-                        <input type="text" name="comm">
+                    <form action="/potvrda/tip/we/id/'.$posao->idworker.'/poso/'.$posao->idjob->id.'" method="post">
+                        <input type="number" name="rate">
                         <input type="text" name="comm">
                         <button type="submit" value="Posalji">Posalji</button>
                     </form>
                     ';
                 }
-                if($posao->ewdone && $tbname=='employer')
+                if(!$posao->ewdone && $tbname=='employer')
                 {
                     // TODO
                     $sadrzaj .=
                     '
-                    <form action="/potvrda/tip/ew/id/'.$posao->idworker.'/poso/'.$posao->idjob->id.'" method="get">
-                        <input type="text" name="comm">
+                    <form action="/potvrda/tip/ew/id/'.$posao->idworker.'/poso/'.$posao->idjob->id.'" method="post">
+                        <input type="number" name="rate">
                         <input type="text" name="comm">
                         <button type="submit" value="Posalji">Posalji</button>
                     </form>
