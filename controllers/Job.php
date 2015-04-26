@@ -62,6 +62,7 @@ class JobController extends Controller {
                 {
                     $opcija_druga = true;
                     $radnici = array();
+                    
                 }    
             }
 
