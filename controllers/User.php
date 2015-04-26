@@ -40,8 +40,17 @@ require 'models/japp.php';
         }
 
         // cija stranica se pregleda
-        $idview = Request::GET('id');
-        $tbnamev = Request::GET('t')=='w'?'worker':'employer';
+        if(!isset($_GET['id']) || !isset($_GET['t']))
+        {
+            $tbnamev = $tbname;
+            $idview = $user->id;
+        }
+        else
+        {
+            $idview = Request::GET('id');
+            $tbnamev = Request::GET('t')=='w'?'worker':'employer';
+        }
+        
         if($tbnamev=='worker')
         {
             $view = Worker::Query("SELECT * FROM worker WHERE id=$idview");
@@ -55,6 +64,7 @@ require 'models/japp.php';
             $view = $view[0];
             $employer = true;
         }
+
 
         $editable = ($user->id==$view->id && $tbname==$tbnamev);
 
