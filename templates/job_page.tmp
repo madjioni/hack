@@ -37,14 +37,31 @@
         <div id="dugme_izmeni">Sacuvaj izmene</div>
 
         <!-- lista radnika -->
-        <p>Ima {radnici|count} radnika prijavljeno.</p>
-        <table>
-        [foreach radnik in radnici]
-            <tr>
-                <td>{radnik.firstname} {radnik.lastname} ({radnik.mail}, {radnik.phone})</td>
-            </tr>
+
+        <!-- aktivan jos -->
+        [if aktivan]
+            <p>Ima {radnici|count} radnika prijavljeno.</p>
+            <table>
+            [foreach radnik in radnici]
+                <tr>
+                    <td>{radnik.firstname} {radnik.lastname} ({radnik.mail}, {radnik.phone})</td>
+                </tr>
+            [end]
+            </table>
+        <!-- zavrsen oglas -->
+        [else]
+            <p>Ima {radnici|count} radnika prijavljeno.</p>
+            <table>
+            [foreach radnik in radnici]
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>{radnik.firstname} {radnik.lastname} ({radnik.mail}, {radnik.phone})</td>
+                </tr>
+            [end]
+            </table>
+
+            <div id="dugme_obavesti">Izaberi radnike</div>
         [end]
-        </table>
     [end]
 
     [if trece]
@@ -66,4 +83,4 @@
 
 </div>
 
-<!-- <script type="text/javascript" src="job_page.js"></script> -->
+<script type="text/javascript" src="/{JS_DIR}/job_page.js"></script>

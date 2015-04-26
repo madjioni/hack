@@ -3,6 +3,7 @@
 require 'models/worker.php';
 require 'models/employer.php';
 require 'models/job.php';
+require 'models/japp.php';
 
 class JobController extends Controller {
 
@@ -22,6 +23,7 @@ class JobController extends Controller {
         $posao = null;
 
         $radnici = null;
+        $aktivan = false;
 
         // dohvatanje posla
         $posao = Job::Query("SELECT * FROM job WHERE id=$job_id");
@@ -61,8 +63,24 @@ class JobController extends Controller {
                 else
                 {
                     $opcija_druga = true;
-                    $radnici = array();
-                    
+                    $radnici = Japp::Query("SELECT * FROM apps WHERE idjob=".$posao->id);
+                    $ws = array();
+                    foreach ($radnici as $radnik)
+                    {
+                        $r = Worker::Query("SELECT * FROM worker WHERE id=".$radnik->idworker);
+                        $ws[] = $r[0];
+                    }
+                    $radnici = $ws;
+
+                    $now = date('m/d/Y h:i:s a', time());
+                    $unix_now = strtotime($now);
+
+                    $start = date('m/d/Y h:i:s a', strtotime($posao->activestart));
+                    $unix_start = strtotime($start);
+
+                    $diff = $posao->activeend * 24 * 60 * 60 * 1000;
+
+                    $aktivan = $start+$diff > $now;
                 }    
             }
 
@@ -86,6 +104,7 @@ class JobController extends Controller {
                     ->posao($posao)
 
                     ->radnici($radnici)
+                    ->aktivan($aktivan)
 
                     ->prvo($opcija_prva)
                     ->drugo($opcija_druga)
