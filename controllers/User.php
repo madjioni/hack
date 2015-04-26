@@ -73,22 +73,41 @@ require 'models/japp.php';
         if($editable)
         {
             // svi poslovi
-            $sadrzaj = '';
-            $poslovi = Japp::Query("SELECT * FROM apps WHERE idworker=$idview ORDER BY ewdone, wedone ASC");
-            foreach ($poslovi as $posao) {
-                $posao->idjob = Job::Query("SELECT * FROM job WHERE id=". $posao->idjob)[0];
+            if($tbname=='worker')
+            {
+                $poslovi = Japp::Query("SELECT * FROM apps WHERE idworker=$idview");
+                var_dump($poslovi);
+                foreach ($poslovi as $posao) {
+                    $posao->idjob = Job::Query("SELECT * FROM job WHERE id=". $posao->idjob)[0];
+                }
+            }
+            else
+            {
+                $poslovi = array();
+                $aa = Job::Query("SELECT * FROM job WHERE idemployer=".$user->id);
+                foreach ($aa as $posao) {
+                    $ps = Japp::Query('SELECT * FROM apps WHERE idjob='.$posao->id);
+                    foreach ($ps as $pp) {
+                        $pp->idjob = $posao;
+                        $poslovi[] = $pp;
+                    }
+                }
+                var_dump($poslovi);
             }
 
-            //var_dump($poslovi);
+            
 
-            $sadrzaj .= '<p>';
+            
             foreach ($poslovi as $posao)
             {
-                // $sadrzaj .= 'Naziv: '.$posao->idjob->title . '<br>';
+                
                 if($posao->ewdone && $posao->wedone)
                 {
+                    $sadrzaj .= '<p>';
+                    $sadrzaj .= 'Naziv: <a href="/job/id/'.$posao->idjob->id.'">'.$posao->idjob->title . '</a><br>';
                     $sadrzaj .= 'Rate: '.$tbnamev=='worker'?$posao->werate:$posao->ewrate . '<br>';
                     $sadrzaj .= 'Comm: '.$tbnamev=='worker'?$posao->wecomm:$posao->ewcomm . '<br>';
+                    $sadrzaj .= '</p>';
                 }
                 if(!$posao->wedone && $tbname=='worker')
                 {
@@ -153,7 +172,7 @@ require 'models/japp.php';
                     ';
                 }
             }
-            $sadrzaj .= '</p>';
+            
         }
         else
         {

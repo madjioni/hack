@@ -46,27 +46,23 @@ $(document).ready(function() {
 
     $( "#dugme_obavesti" ).click(function() {
 
-        // $('#response_log').html("Login res: ");
-        // var f_email = $('#email_log').val();
-        // var f_pass = $('#password_log').val();
+        $('.chkbx').each( function(i) {
+            var id = $(this).attr('id');
+            //var s = $(this)s.checked;
+            var s = document.getElementById(id).checked;
+            id = id.substring(2);
 
-        // $.ajax({
-        //     method: "POST",
-        //     url: "/logincheck/",
-        //     data: {email: f_email, pass: f_pass}
-        // })
-        // .done(function( msg ) {
-        //     if(msg=='bad')
-        //     {
-        //         $('#response_log').html('Losi podaci.');
-        //         window.location.href = 'login';
-        //     } else
-        //     {
-        //         window.location.href = '/';
-        //     }
+            var jid = $('#hid').val();
 
-
-        // });
+            $.ajax({
+                method: "GET",
+                url: "/osvezi/id/"+id+"/s/"+(s?'1':'0')+'/j/'+jid
+                // async: false
+            })
+            .done(function( msg ) {
+                alert(msg);
+            });
+        });
 
     });
 

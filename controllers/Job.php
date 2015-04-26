@@ -64,12 +64,11 @@ class JobController extends Controller {
                 else
                 {
                     $opcija_druga = true;
-                    $radnici = Japp::Query("SELECT * FROM apps WHERE idjob=".$posao->id);
+                    $radnici = Japp::Query("SELECT * FROM apps WHERE wedone=1 AND ewdone=1 AND idjob=".$posao->id);
                     $ws = array();
                     foreach ($radnici as $radnik)
                     {
-                        $r = Worker::Query("SELECT * FROM worker WHERE id=".$radnik->idworker);
-                        $ws[] = $r[0];
+                        $r = Worker::Query("SELECT * FROM worker WHERE id=".$radnik->idworker)[0];
                     }
                     $radnici = $ws;
 

@@ -147,10 +147,11 @@
         <!-- zavrsen oglas -->
         [else]
             <p>Ima {radnici|count} radnika prijavljeno.</p>
+            <input type="hidden" id="hid" value="{posao.id}">
             <table>
             [foreach radnik in radnici]
                 <tr>
-                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" id="cb{radnik.id}" class="chkbx"></td>
                     <td>{radnik.firstname} {radnik.lastname} ({radnik.mail}, {radnik.phone})</td>
                 </tr>
             [end]

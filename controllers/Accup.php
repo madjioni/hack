@@ -22,6 +22,6 @@ class AccupController extends Controller {
         ";
         DB::Query($q);
 
-        Request::GotoAddress("/user/id/$id/t/".Request::GET('t'));
+        Request::GtooAddress("/user/id/$id/t/".Request::GET('t'));
     }
 }
