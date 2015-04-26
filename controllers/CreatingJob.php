@@ -9,20 +9,20 @@ class CreatingJobController extends Controller {
         $title=Request::POST('title');
         $description=Request::POST('description');
         $location=Request::POST('location');
-        $date_start=Request::POST('date_start');
-        $date_end=Request::POST('date_end');
+        $datestart=Request::POST('datestart');
+        $dateend=Request::POST('dateend');
         $num=Request::POST('num');
         $price=Request::POST('price');
-        $price_type=Request::POST('price_type');
+        $pricetype=Request::POST('pricetype');
         $time=Request::POST('time');
         $transport=Request::POST('transport');
-        $active_end = Request::POST('active_end');
+        $activeend = Request::POST('activeend');
         $category=Request::POST('category');
 
-        $empl_res = DB::Query(" SELECT id from employer where mail='".Session::GetData()['email']."'");
+        $emplres = DB::Query(" SELECT id from employer where mail='".Session::GetData()['email']."'");
 
 
-        if($empl_res){
+        if($emplres){
 
 /*
 ".$empl_res[0] ."
@@ -45,7 +45,7 @@ class CreatingJobController extends Controller {
 */
 
 
-            $res = DB::Query("INSERT INTO job(id, title, description, location, datestart, dateend, num, price, pricetype, time, transportation, activeend, idemployer, idcat) VALUES (0, '$title', '$description', '$location', '$date_start', '$date_end', '$num', $price , $price_type, $time,'$transport',$active_end,".$empl_res[0][0].",$category)");
+            $res = DB::Query("INSERT INTO job(id, title, description, location, datestart, dateend, num, price, pricetype, time, transportation, activeend, idemployer, idcat) VALUES (0, '$title', '$description', '$location', '$datestart', '$dateend', '$num', $price , $pricetype, $time,'$transport',$activeend,".$emplres[0][0].",$category)");
 
 /*
 
@@ -64,11 +64,11 @@ class CreatingJobController extends Controller {
             }
 
             echo $result;
-        } 
+        }
         else{
 
             echo "Greska u upitu o id-u poslodavca";
-            
+
         }
     }
 }
