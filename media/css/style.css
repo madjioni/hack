@@ -176,7 +176,7 @@ hr {
   border: 1px solid #fff;
 }
 .btn-primary {
-  background: #C00000;
+  background: #C00000 !important;
   border: 1px solid #C00000;
   color: #fff;
 }
@@ -1138,7 +1138,8 @@ article {
 .form-register {
   background: #eff3f6;
   padding: 20px 20px;
-  margin-top: 50px;
+  margin: 50px 0;
+
 }
 .form-register:after {
   content: '';

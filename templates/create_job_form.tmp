@@ -1,58 +1,97 @@
-<!-- sve da ide preko AJAX sa jQuery, mnogo je lepse i lakse, ili pak da ide preko forme -->
+<div id="home" class="static-header light">
+    <div class="text-heading">
+        <h1>Oglasite posao</h1>
+    </div>
 
-<form name="form_cj" action="/CreatingJob" method="POST">
-    <h4>Oglasite posao</h4>
-    title : <br>
-    <input type="text" name="title"><br/>
-    description : <br>
-    <textarea name="description"></textarea><br/>
-    location : <br>
-    <input type="text" name="location"> <br/>
-    datestart : <br>
-    <input type="date" name="date_start" ><br/>
-    dateend : <br>
-    <input type="date" name="date_end" ><br/>
+     <a id="showHere"></a>
 
-     num //broj ljudi : <br>
-    <input type="number" name="num" min="1" max="100"><br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                <form class="form form-register dark" id="registration" name="form_cj" action="/CreatingJob" method="POST">
+                    <div class="form-group">
+                        <label for="title" class="col-sm-3 col-xs-12 control-label">Naslov</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="title" class="form-control" id="title" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description" class="col-sm-3 col-xs-12 control-label">Opis</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <textarea type="text" name="description" class="form-control" id="description" placeholder=""></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="location" class="col-sm-3 col-xs-12 control-label">Lokacija</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="location" class="form-control" id="location" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="datestart" class="col-sm-3 col-xs-12 control-label">Datum pocetka</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="date" name="datestart" class="form-control" id="datestart" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dateend" class="col-sm-3 col-xs-12 control-label">Datum zavrsetka</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="date" name="dateend" class="form-control" id="dateend" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="number" class="col-sm-3 col-xs-12 control-label">Broj radnika</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="number" value="3"  min="1" max="100" name="num" class="form-control" id="number" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="price" class="col-sm-3 col-xs-12 control-label">Zarada</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="price" class="form-control" id="price" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pricetype" class="col-sm-3 col-xs-12 control-label">Tip placanja</label>
+                        <div class="col-sm-9 col-xs-12">
+                             <select name="pricetype" class="form-control" id="pricetype" placeholder="">
+                                <option value="1">RSD/dan</option>
+                                <option value="2">RSD/h</option>
+                                <option value="3">RSD/kg</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="time" class="col-sm-3 col-xs-12 control-label">Radno vreme</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="time" class="form-control" id="time" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="transport" class="col-sm-3 col-xs-12 control-label">Transport</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="transport" class="form-control" id="transport" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="number" class="col-sm-3 col-xs-12 control-label">Trajanje oglasa</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="number" value="7"  min="1" max="30" name="activeend" class="form-control" id="number" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="category" class="col-sm-3 col-xs-12 control-label">Tip posla</label>
+                        <div class="col-sm-9 col-xs-12">
+                             <select name="category" class="form-control" id="category" placeholder="">
+                                <option value="1">KOPAC</option>
+                                <option value="2">BERAC</option>
+                            </select>
+                        </div>
+                    </div>
 
-     price : <br>
-    <input type="text" name="price"><br/>
-
-     price type : <br>
-    <select name="price_type">
-        <option value="1">RSD/dan</option>
-        <option value="2">RSD/h</option>
-        <option value="3">RSD/kg</option>
-
-    </select> <br>
-
-     time //doba dana : <br>
-    <input type="text" name="time"><br/>
-
-
-
-     transport : <br>
-    <input type="text" name="transport"> <br>
-
-
-
-     Duzina trajanja oglasa (u danima) : <br>
-    <input type="number" name="active_end" min="1" max="30" value="7"><br/>
-     kategorija : <br> 
-    <select name="category"><br>
-        <option value="1">KOPAC</option>
-        <option value="2">BERAC</option>
-    </select>
-    <!--  -->
-    <!--  -->
-    <!--  -->
-    <!--  -->
-    <!--  -->
-    <!--  -->
-    <!--  -->
-
-
-	<button type="submit" value="posao">Oglasi</button>
-</form>
-
+                    <button id="dugme_log" class="btn btn-primary btn-lg btn-block" type="submit" >Oglasi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
