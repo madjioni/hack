@@ -20,7 +20,7 @@ class ConfirmController extends Controller {
         }
         if($t==4)
         {
-            $msg = '';
+            $msg = 'Registracija uspesna.';
         }
         if($t==5)
         {

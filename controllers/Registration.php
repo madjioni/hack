@@ -41,14 +41,14 @@ class RegistrationController extends Controller {
             
             $to      = $email;
             $subject = 'Registration';
-            $message = 'To confirm your registration, please click on the link: <a href="'.Core::$config['WEBSITE'].'/confirm/user/'.$email.'">confirm</a>.';
+            $message = 'To confirm your registration, please click on the link below: <a href="'.Core::$config['WEBSITE'].'/t/'.$type_reg.'/activate/user/'.$pass.'">confirm</a>.<br>Thank you, paprika.rs team';
             $headers = "MIME-Version: 1.0\r\n";
             $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-            $headers .= "Reply-To: NoReply <noreply@madjionicarskitrikovi.com>\r\n";
-            $headers .= "From: ".Core::$config['TITLE']." registration <noreply@madjionicarskitrikovi.com>\r\n"; 
+            $headers .= "Reply-To: NoReply <noreply@paprika.rs>\r\n";
+            $headers .= "From: paprikaregistration <noreply@paprika.rs>\r\n"; 
 
             // TODO: send email confirmation
-            //mail($to, $subject, $message, $headers);
+            mail($to, $subject, $message, $headers);
         }
 
         echo $res;
