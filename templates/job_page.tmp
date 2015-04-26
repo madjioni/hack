@@ -1,20 +1,37 @@
-<div>
-    <h4>Posao</h4>
+<div id="home" class="static-header small-header light">
+    <div class="text-heading"></div>
+</div>
+
+
     [if prvo]
-    <p>
-        Poslodavac: <a href="/user/id/{poslodavac.id}">{poslodavac.firstname}</a>
-        Naziv: {posao.title} <br>
-        Lokacija: {posao.location} <br>
-        Datum: {posao.datestart} - {posao.dateend} <br>
-        Broj radnika: {posao.num} <br>
-        Plata: {posao.price} ({posao.pricetype}) <br>
-        Radno vreme: {posao.time} <br>
-        Transport: {posao.transportation} <br>
-        Opis: {posao.description} <br>
-    </p>
+<section id="oglas" class="section dark">
+    <div class="container">
+        <div class="section-header animated hiding" data-animation="fadeInDown">
+           <p class="location">Lokacija: {posao.location}</p>
+           <h2>Oglas - <span class="highlight">{posao.title}</span></h2>
+           <p class="date"><a href="/user/id/{poslodavac.id}">Poslodavac: {poslodavac.firstname}</a>Datum: {posao.datestart} - {posao.dateend}</p>
+           <div class="sub-heading description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                {posao.description}
+           </div>
+           <p class="transport">Transport: {posao.transportation}</p>
+           <p class="job-box num-employers"><i class="icon icon-faces-users-04 icon-active"></i>Broj radnika <span>{posao.num}</span></p>
+           <p class="job-box price"><i class="icon icon-office-24 icon-shopping-03"></i>Plata <span>{posao.price} ({posao.pricetype})</span></p>
+           <p class="job-box num-employers"><i class="icon icon-office-24 icon-active"></i>Radno vreme<span>{posao.time}h</span></p>
+
+       </div>
+    </div>
+</section>
+
     [end]
 
     [if drugo]
+
+<section id="oglasi" class="section dark">
+    <div class="container">
+       <div class="section-header animated hiding" data-animation="fadeInDown">
+           <h2>Oglas - <span class="highlight">{posao.title}</span></h2>
+       </div>
 
     <div class="container">
         <div class="row">
@@ -96,19 +113,24 @@
                         <label for="category" class="col-sm-3 col-xs-12 control-label">Tip posla</label>
                         <div class="col-sm-9 col-xs-12">
                              <select name="category" class="form-control" id="category" value="{posao.idcat}">
-                                <option value="1">KOPAC</option>
-                                <option value="2">BERAC</option>
+                                  <option value="1">Kopac</option>
+                                  <option value="2">Berac</option>
+                                  <option value="3">Uzgajivac</option>
+                                  <option value="4">Orezivac</option>
+                                  <option value="5">Sejac</option>
+                                  <option value="6">Zetelac</option>
+                                  <option value="7">Utovarioc</option>
+                                  <option value="8">Navodnjavac</option>
                             </select>
                         </div>
                     </div>
 
-                    <div id="izmene_res"></div>
                     <div id="dugme_izmeni" class="btn btn-primary btn-lg btn-block" >Sacuvaj izmene</div>
 
                 </form>
             </div>
         </div>
-    </div>
+
 
         <!-- lista radnika -->
 
@@ -137,26 +159,34 @@
             <div id="dugme_obavesti">Izaberi radnike</div>
         [end]
     [end]
+    </div>
+</section>
 
     [if trece]
     <p>
-        Poslodavac: <a href="/user/id/{poslodavac.id}">{poslodavac.firstname}</a>
-        Naziv: {posao.title} <br>
-        Lokacija: {posao.location} <br>
-        Datum: {posao.datestart} - {posao.dateend} <br>
-        Broj radnika: {posao.num} <br>
-        Plata: {posao.price} ({posao.pricetype}) <br>
-        Radno vreme: {posao.time} <br>
-        Transport: {posao.transportation} <br>
-        Opis: {posao.description} <br>
-        <input type="hidden" value="{posao.id}" id="idposao">
-        <input type="hidden" value="{user.id}" id="iduser">
-    </p>
+    <section id="oglas" class="section dark">
+        <div class="container">
+            <div class="section-header animated hiding" data-animation="fadeInDown">
+               <p class="location">Lokacija: {posao.location}</p>
+               <h2>Oglas - <span class="highlight">{posao.title}</span></h2><a id="dugme_prijava" class="btn-apply">Prijavi se</a>
+               <p class="date"><a href="/user/id/{poslodavac.id}">Poslodavac: {poslodavac.firstname}</a>Datum: {posao.datestart} - {posao.dateend}</p>
+               <div class="sub-heading description">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                    {posao.description}
+               </div>
+               <p class="transport">Transport: {posao.transportation}</p>
+               <p class="job-box num-employers"><i class="icon icon-faces-users-04 icon-active"></i>Broj radnika <span>{posao.num}</span></p>
+               <p class="job-box price"><i class="icon icon-office-24 icon-shopping-03"></i>Plata <span>{posao.price} ({posao.pricetype})</span></p>
+               <p class="job-box num-employers"><i class="icon icon-office-24 icon-active"></i>Radno vreme<span>{posao.time}h</span></p>
 
-    <!-- provera da li je prijavljen vec ili ne -->
-    <div id="dugme_prijava">Prijavi se</div>
+           </div>
+        </div>
+    </section>
+    <input type="hidden" value="{posao.id}" id="idposao">
+    <input type="hidden" value="{user.id}" id="iduser">
+    </p>
     [end]
 
-</div>
+    </div>
 
 <script type="text/javascript" src="/{JS_DIR}/job_page.js"></script>

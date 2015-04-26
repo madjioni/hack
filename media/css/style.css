@@ -8,6 +8,9 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
 }
+textarea {
+  height: 100px !important;
+}
 strong {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
@@ -774,7 +777,7 @@ article {
   display: none;
 }
 
-#oglasi .single-job {
+/*#oglasi .single-job {
   width: 30%;
   float: left;
   display: block;
@@ -810,11 +813,11 @@ article {
 #oglasi .single-job .avatar {
   display: none;
 }
-
+*/
 #oglasi-all .single-job .title {
   display: inline-block;
-  font-size: 24px;
-  padding-top: 25px;
+  font-size: 20px;
+  padding-top: 16px;
 }
 
 #oglasi-all .single-job .title span {
@@ -823,18 +826,19 @@ article {
 }
 
 #oglasi-all .single-job .avatar {
-  width: 70px;
+  width: 60px;
   display: inline-block;
   border-radius: 50%;
-  margin: 20px;
+  margin: 10px;
   float: left;
 }
 
 #oglasi-all .single-job .payment {
   display: inline-block;
   float: right;
-  padding: 43px;
-  background: rgba(0, 0, 0, 0.03);
+  padding: 28px;
+  background: rgba(255, 0, 0, 0.6);
+  color: #fff;
   margin: 0;
 }
 
@@ -843,6 +847,53 @@ article {
   float: left;
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+#oglasi-all .sub-heading {
+  margin-bottom: 50px;
+}
+
+#oglas {
+  text-align: left;
+}
+
+#oglas h2 {
+  display: inline-block;
+}
+
+#oglas .description {
+  margin: 20px 0px 10px;
+}
+
+#oglas .job-box {
+  width: 100px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+#oglas .job-box i {
+  display: block;
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #c00000;
+}
+
+#oglas .date a {
+  margin-right: 50px;
+}
+
+#oglas .job-box span{
+  display: block;
+}
+
+#oglas .btn-apply {
+  float: right;
+  text-transform: uppercase;
+  border: 1px solid #c00000;
+  border-radius: 10px;
+  padding: 5px 20px;
+  margin-top: 30px;
 }
 
 .heading-job {
@@ -1191,6 +1242,7 @@ article {
 .form-register .form-control {
   border-left: 3px solid #C00000;
 }
+
 .form-register .form-group {
   margin-bottom: 45px;
   margin-top: 20px;
@@ -2062,7 +2114,7 @@ ol {
     overflow: hidden;
     height: 0;
     display: block;
-    background: rgba(11, 64, 95, 0.85);
+    background: rgba(39, 7, 17, 0.85);
     text-align: center;
   }
   .navigation-navbar.open {
