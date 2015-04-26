@@ -4,17 +4,39 @@ class ConfirmController extends Controller {
 
     public function run()
     {
-        $email = Request::GET('user');
-        $result = "not confirmed";
-
-        if( DB::Query("UPDATE users SET active=1 WHERE email='$email'") )
+        $t = intval(Request::GET('t'));
+        $msg = '';
+        if(t==1)
         {
-            $result = "confirmed";
+            $msg = 'Greska tokom kreiranja oglasa.';
+        }
+        if(t==2)
+        {
+            $msg = 'Oglas uspesno kreiran.';
+        }
+        if(t==3)
+        {
+            $msg = 'Komentar uspesno ostavljen.';
+        }
+        if(t==4)
+        {
+            $msg = '';
+        }
+        if(t==5)
+        {
+            $msg = '';
+        }
+        if(t==6)
+        {
+            $msg = '';
         }
 
         Template::load('base')
             ->title('Confirmation')
-            ->content('Registration: '.$result.' ('.$email.').')
+            ->content
+            (
+
+            )
         ->render();
     }
 }

@@ -60,7 +60,7 @@ $(document).ready(function() {
                 // async: false
             })
             .done(function( msg ) {
-                alert(msg);
+                alertify.log("Uspesno potvrdjeno");
             });
         });
 
@@ -83,10 +83,12 @@ $(document).ready(function() {
             if(msg=='odjavljen')
             {
                 $('#dugme_prijava').html('Prijavi se');
+                alertify.log("Uspesno odjavlje");
             }
             else if(msg=='prijavljen')
             {
                 $('#dugme_prijava').html('Odjavi se');
+                alertify.log("Uspesno prijavljen");
             }
             
         });

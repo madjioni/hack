@@ -20,6 +20,6 @@ class PotvrdaController extends Controller {
         echo $q;
 
         DB::Query($q);
-        //Request::GotoAddress('/');
+        Request::GotoAddress('/confirm/t/3');
     }
 }

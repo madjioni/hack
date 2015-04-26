@@ -10,8 +10,8 @@ class LogincheckController extends Controller {
 
         if(Session::Login($email, $pass))
         {
-            $res = 'good';
-            //Request::GotoAddress('/');
+            echo 'good';
+            //Request::GotoAddress('/confirm/t/3');
         }
 
         echo $res;

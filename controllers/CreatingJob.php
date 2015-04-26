@@ -28,12 +28,12 @@ class CreatingJobController extends Controller {
                                     VALUES (0, '$title', '$description', '$location', '$datestart', '$dateend', $num, $price , $pricetype, '$time','$transport',$activeend,".$emplres[0][0].",$category)");
 
             if($res){
-                $result="Uspesno oglasen posao!";
+                Request::GotoAddress('/confirm/t/2');
             }
 
             else{
 
-                $result="Nespesno oglasen posao!";
+                Request::GotoAddress('/confirm/t/1');
 
             }
 
@@ -41,7 +41,7 @@ class CreatingJobController extends Controller {
         }
         else{
 
-            echo "Greska u upitu o id-u poslodavca";
+            Request::GotoAddress('/confirm/t/1');
 
         }
     }
