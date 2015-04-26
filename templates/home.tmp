@@ -7,11 +7,11 @@
               <li><a href="#about" class="btn btn-default animated hiding" data-animation="bounceIn" data-delay="900">O paprika.rs </a></li>
           </ul>
       </div>
-      <!-- <div class="video-wrapper">
+      <div class="video-wrapper">
           <div class="container">
               <img src="media/img/features/app_block.png" alt="video" class="img-responsive animated hiding" data-animation="bounceInUp" data-delay="1000" />
           </div>
-      </div> -->
+      </div>
   </div>
 
   <a id="showHere"></a>

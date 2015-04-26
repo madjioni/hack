@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/font-awesome.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/font-lineicons.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/animate.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/toastr.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/style.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/alertify.default.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/alertify.core.css" type="text/css" media="all" />
@@ -24,16 +23,16 @@
 
 	<body>
 		  <!-- Preloader -->
-<!--   <div id="mask">
+  <div id="mask">
       <div id="loader"></div>
-  </div> -->
+  </div>
 
   <header>
     <nav class="navigation navigation-header">
       <div class="container">
         <div class="navigation-brand">
           <div class="brand-logo">
-  					<a href="#" class="logo"></a>
+  					<a href="/home" class="logo"></a>
  					  <span class="sr-only">paprika.rs</span>
           </div>
           <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown" data-target=".navigation-navbar">
@@ -73,15 +72,9 @@
 
 		[block script]
     <script type="text/javascript" src="/{CONFIG_JS_DIR}/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/{CONFIG_JS_DIR}/jquery.flexslider-min.js"></script>
     <script type="text/javascript" src="/{CONFIG_JS_DIR}/jquery.nav.js"></script>
     <script type="text/javascript" src="/{CONFIG_JS_DIR}/jquery.appear.js"></script>
-    <script type="text/javascript" src="/{CONFIG_JS_DIR}/jquery.plugin.js"></script>
-    <script type="text/javascript" src="/{CONFIG_JS_DIR}/jquery.countdown.js"></script>
-    <script type="text/javascript" src="/{CONFIG_JS_DIR}/waypoints.min.js"></script>
-    <script type="text/javascript" src="/{CONFIG_JS_DIR}/waypoints-sticky.min.js"></script>
     <script type="text/javascript" src="/{CONFIG_JS_DIR}/jquery.validate.js"></script>
-    <script type="text/javascript" src="/{CONFIG_JS_DIR}/toastr.min.js"></script>
     <script type="text/javascript" src="/{CONFIG_JS_DIR}/headhesive.min.js"></script>
     <script type="text/javascript" src="/{CONFIG_JS_DIR}/scripts.js"></script>
     <script type="text/javascript" src="/{CONFIG_JS_DIR}/alertify.min.js"></script>

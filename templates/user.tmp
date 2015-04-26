@@ -136,20 +136,29 @@
     [end]
 
     [if employer]
-    <p>
-        IME:{user.firstname} <br>
-        PREZIME: {user.lastname} <br>
-        Lokacija: {user.location} <br>
-        e-mail: {user.mail} <br>
-        Opis: {user.description} <br>
-        Tel: {user.phone}
-    </p>
+        <div class="container">
+            <div class="section-header rate animated hiding" data-animation="fadeInDown">
+               <h2>POSLODAVAC - <span class="highlight">{user.firstname} {user.lastname}</span></h2>
+            </div>
+            <div class="row">
+                <p>Lokacija: {user.location}</p>
+                <p>e-mail: {user.mail}</p>
+                <p>Tel: {user.phone}</p>
+            </div>
+        </div>
 
     [if poslovi|count]
         [foreach posao in poslovi]
-            <p>Naziv: {posao.idjob.title} <br>
-            Rate: {posao.idjob.werate} <br>
-            Comm: {posao.idjob.wecomm}</p>
+        <div class="container">
+            <div class="section-header rate animated hiding" data-animation="fadeInDown">
+               <h2><span class="highlight">POSLOVI</span></h2>
+            </div>
+            <div class="row">
+                <p>Naziv: {posao.idjob.title}</p>
+                <p>Rate: {posao.idjob.ewrate}</p>
+                <p>Comm: {posao.idjob.ewcomm}</p>
+            </div>
+        </div>
         [end]
     [end]
 
