@@ -104,7 +104,7 @@ require 'models/japp.php';
                     $sadrzaj .= '<p class="job-title">Naziv: <a href="/job/id/'.$posao->idjob->id.'">'.$posao->idjob->title . '</a></p>';
                     $sadrzaj .= '<div class="job-rate">'.($tbnamev=='worker'?$posao->ewrate:$posao->werate) . '<span>☆</span></div>';
                     $sadrzaj .= '<p class="job-comm">Comm: '.($tbnamev=='worker'?$posao->ewcomm:$posao->wecomm) . '</p>';
-                    $sadrzaj .= '</div>';
+                    $sadrzaj .= '</div><br>';
                 }
                 if(!$posao->wedone && $tbname=='worker')
                 {
@@ -171,16 +171,27 @@ require 'models/japp.php';
             }
 
         }
-        // else
-        // {
-        //     // uradjeni poslovi
-        //     $poslovi = Japp::Query("SELECT * FROM apps WHERE idworker=$idview AND ewdone=1 AND wedone=1");
-        //     foreach ($poslovi as $posao) {
-        //         $posao->idjob = Job::Query("SELECT * FROM job WHERE id=". $posao->idjob)[0];
-        //     }
-        //     $sadrzaj = $poslovi;
-
-        // }
+        else
+        {
+            // uradjeni poslovi
+            $sadrzaj = '';
+            $poslovi = Japp::Query("SELECT * FROM apps WHERE idworker=$idview AND ewdone=1 AND wedone=1");
+            $ukupno = 0;
+            foreach ($poslovi as $posao) {
+                $posao->idjob = Job::Query("SELECT * FROM job WHERE id=". $posao->idjob)[0];
+                $ukupno += ($tbnamev=='worker'?$posao->ewrate:$posao->werate);
+                $sadrzaj .= '<div class="ratee">';
+                $sadrzaj .= '<p class="job-title">Naziv: <a href="/job/id/'.$posao->idjob->id.'">'.$posao->idjob->title . '</a></p>';
+                $sadrzaj .= '<div class="job-rate">'.($tbnamev=='worker'?$posao->ewrate:$posao->werate) . '<span>☆</span></div>';
+                $sadrzaj .= '<p class="job-comm">Comm: '.($tbnamev=='worker'?$posao->ewcomm:$posao->wecomm) . '</p>';
+                $sadrzaj .= '</div><br>';
+            }
+            $ukupno = floatval($ukupno)/count($poslovi);
+            $sadrzaj .= '<div class="ratee">';
+            $sadrzaj .= '<p class="job-title">Prosecna ocena</p>';
+            $sadrzaj .= '<div class="job-rate">'.$ukupno. '<span>☆</span></div>';
+            $sadrzaj .= '</div><br>';
+        }
 
 
 
