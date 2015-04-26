@@ -21,8 +21,9 @@
           <div class="section-header animated hiding" data-animation="fadeInDown">
               <h2><span class="highlight">PAPRIKA</span> OGLASI</h2>
               <div class="sub-heading">
-                  Lorem ipsum dolor sit atmet sit dolor greand fdanrh s
-                  <br />dfs sit atmet sit dolor greand fdanrh sdfs
+                  Nas oglasni servis je deo poslovnog i drustvenog okruzenja u Srbiji primarno orijentisanom ka profesionalnom i fer </br> odnosu prema svojim oglasivacima, radnicima i korisnicima.
+                </br></br>
+Ovakvim, inovativnim nacinom poslovanja stvaramo sredinu u kojoj svi zajedno, mozemo da napredujemo </br> i na taj nacin, unapredimo i lokalnu zajednicu, ciji smo nezaobilazan deo. 
               </div>
               <div>{sadrzaj} </div>
           </div>
@@ -145,9 +146,9 @@
                     <div class="logo-wrapper">
                         <img src="media/img/logo.png" alt="logo" />
                     </div>
-                    <p>Imajući u vidu da se u Srbiji ubrzano razvija IT sektor, sa ciljem da se obezbede preduslovi za promovisanje poslovanja porodičnih poljoprivrednih gazdinstava, kako bi nalaženjem novih radnih odnosa poboljšali trenutnu proizvodnju i prodaju.
-
-Jedan od ciljeva portala je da se vlasnici porodičnih poljoprivrednih gazdinstava u Srbiji, članovi portala, klijenti i radnici, promovišu, međusobno upoznaju, organizuju poslovnog interesovanja,  poboljšaju prodaju svojih poljoprivrednih proizvoda.</p>
+                    <p>Ljudi zaboravljaju da veliki procenat nasih poslova i dalje zavisi od poljoprivredne proizvodnje. </br></br>
+                    
+                    Poljoprivreda nije samo uzgoj useva kako je to popularno generalizovano - to je proizvodnja hrane i zetva zdravih produkata sa prostora svetskog zemljista i voda. </br></br> Bez poljoprivrede nije moguce imati gradove, berzu, banke, univerzitete, crkve ili vojsku. Poljoprivreda je temelj civilizacije i stabilne ekonomije.</p>
                     <p><strong>Dragan Okanovic, CTO</strong>.</p>
                 </div>
                 <div class="col-sm-5 social-wrap">
