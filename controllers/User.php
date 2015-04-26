@@ -61,11 +61,41 @@ require 'models/japp.php';
         if($editable)
         {
             // svi poslovi
+            $sadrzaj = '';
             $poslovi = Japp::Query("SELECT * FROM apps WHERE idworker=$idview ORDER BY ewdone, wedone ASC");
             foreach ($poslovi as $posao) {
                 $posao->idjob = Job::Query("SELECT * FROM job WHERE id=". $posao->idjob)[0];
             }
-            var_dump($poslovi);
+
+            //var_dump($poslovi);
+            
+            $sadrzaj .= '<p>';
+            foreach ($poslovi as $posao)
+            {
+                $sadrzaj .= 'Naziv: '.$posao->idjob->title . '<br>';
+                if($posao->ewdone && $posao->wedone)
+                {
+                    $sadrzaj .= 'Rate: '.$tbnamev=='worker'?$posao->werate:$posao->ewrate . '<br>';
+                    $sadrzaj .= 'Comm: '.$tbnamev=='worker'?$posao->wecomm:$posao->ewcomm . '<br>';
+                }
+                if($posao->wedone && $tbname=='worker')
+                {
+                    // TODO
+                    $sadrzaj .=
+                    '
+                    <form action="/potvrda/tip/we/id//poso/" method="get">
+                        <input type="text" name="comm">
+                        <input type="text" name="comm">
+                        <button type="submit" value="Posalji">Posalji</button>
+                    </form>
+                    ';
+                }
+                if($posao->ewdone && $tbname=='employer')
+                {
+                    // TODO
+                }
+            }
+            $sadrzaj .= '</p>';
         }
         else
         {
@@ -90,7 +120,7 @@ require 'models/japp.php';
                     ->employer($employer)
                     ->editable($editable)
                     ->user($view)
-                    ->poslovi($poslovi)
+                    ->poslovi($sadrzaj)
                     ->get() 
             )
             ->render();

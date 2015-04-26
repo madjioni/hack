@@ -10,22 +10,7 @@
         <button type="submit">Izmeni</button>
     </form>
 
-    [if poslovi|count]
-        [foreach posao in poslovi]
-            <p>Naziv: {posao.idjob.title} <br>
-            [if posao.idjob.wedone]
-                [if posao.idjob.ewdone]
-                    Rate: {posao.idjob.werate} <br>
-                    Comm: {posao.idjob.wecomm} <br>
-                [else]
-                    TODO <br>
-                    TODO <br>
-                    TODO <br>
-                [end]
-            [end]
-            </p>
-        [end]
-    [end]
+    {poslovi}
 
     [end]
 
