@@ -118,21 +118,6 @@
             </div>
         </div>
 
-    [if poslovi|count]
-        [foreach posao in poslovi]
-        <div class="container">
-            <div class="section-header rate animated hiding" data-animation="fadeInDown">
-               <h2>OCENE - <span class="highlight">POSLOVI</span></h2>
-            </div>
-            <div class="row">
-                <p>Naziv: {posao.idjob.title}</p>
-                <p>Rate: {posao.idjob.ewrate}</p>
-                <p>Comm: {posao.idjob.ewcomm}</p>
-            </div>
-        </div>
-        [end]
-    [end]
-
     [end]
 
     [if employer]
@@ -147,23 +132,9 @@
             </div>
         </div>
 
-    [if poslovi|count]
-        [foreach posao in poslovi]
-        <div class="container">
-            <div class="section-header rate animated hiding" data-animation="fadeInDown">
-               <h2><span class="highlight">POSLOVI</span></h2>
-            </div>
-            <div class="row">
-                <p>Naziv: {posao.idjob.title}</p>
-                <p>Rate: {posao.idjob.ewrate}</p>
-                <p>Comm: {posao.idjob.ewcomm}</p>
-            </div>
-        </div>
-        [end]
+    
     [end]
-
-    [end]
-
+    {poslovi}
 [end]
 
 

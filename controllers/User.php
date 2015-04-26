@@ -76,7 +76,7 @@ require 'models/japp.php';
             if($tbname=='worker')
             {
                 $poslovi = Japp::Query("SELECT * FROM apps WHERE idworker=$idview");
-                var_dump($poslovi);
+                //var_dump($poslovi);
                 foreach ($poslovi as $posao) {
                     $posao->idjob = Job::Query("SELECT * FROM job WHERE id=". $posao->idjob)[0];
                 }
@@ -92,11 +92,8 @@ require 'models/japp.php';
                         $poslovi[] = $pp;
                     }
                 }
-                var_dump($poslovi);
+                //var_dump($poslovi);
             }
-
-            
-
             
             foreach ($poslovi as $posao)
             {
@@ -105,8 +102,8 @@ require 'models/japp.php';
                 {
                     $sadrzaj .= '<p>';
                     $sadrzaj .= 'Naziv: <a href="/job/id/'.$posao->idjob->id.'">'.$posao->idjob->title . '</a><br>';
-                    $sadrzaj .= 'Rate: '.$tbnamev=='worker'?$posao->werate:$posao->ewrate . '<br>';
-                    $sadrzaj .= 'Comm: '.$tbnamev=='worker'?$posao->wecomm:$posao->ewcomm . '<br>';
+                    $sadrzaj .= 'Rate: '.($tbnamev=='worker'?$posao->ewrate:$posao->werate) . '<br>';
+                    $sadrzaj .= 'Comm: '.($tbnamev=='worker'?$posao->ewcomm:$posao->wecomm) . '<br>';
                     $sadrzaj .= '</p>';
                 }
                 if(!$posao->wedone && $tbname=='worker')
@@ -174,16 +171,16 @@ require 'models/japp.php';
             }
             
         }
-        else
-        {
-            // uradjeni poslovi
-            $poslovi = Japp::Query("SELECT * FROM apps WHERE idworker=$idview AND ewdone=1 AND wedone=1");
-            foreach ($poslovi as $posao) {
-                $posao->idjob = Job::Query("SELECT * FROM job WHERE id=". $posao->idjob)[0];
-            }
-            $sadrzaj = $poslovi;
+        // else
+        // {
+        //     // uradjeni poslovi
+        //     $poslovi = Japp::Query("SELECT * FROM apps WHERE idworker=$idview AND ewdone=1 AND wedone=1");
+        //     foreach ($poslovi as $posao) {
+        //         $posao->idjob = Job::Query("SELECT * FROM job WHERE id=". $posao->idjob)[0];
+        //     }
+        //     $sadrzaj = $poslovi;
 
-        }
+        // }
 
 
 

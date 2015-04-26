@@ -68,7 +68,7 @@ class JobController extends Controller {
                     $ws = array();
                     foreach ($radnici as $radnik)
                     {
-                        $r = Worker::Query("SELECT * FROM worker WHERE id=".$radnik->idworker)[0];
+                        $ws[] = Worker::Query("SELECT * FROM worker WHERE id=".$radnik->idworker)[0];
                     }
                     $radnici = $ws;
 
