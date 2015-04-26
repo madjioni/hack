@@ -1,6 +1,8 @@
  <?php
 require 'models/worker.php';
 require 'models/employer.php';
+require 'models/job.php';
+require 'models/japp.php';
 
  class UserController extends Controller {
 
@@ -19,6 +21,7 @@ require 'models/employer.php';
         $worker = false;
         $employer = false;
         $editable = false;
+        $poslovi = null;
 
         if($logged)
         {
@@ -55,6 +58,25 @@ require 'models/employer.php';
 
         $editable = ($user->id==$view->id && $tbname==$tbnamev);
 
+        if($editable)
+        {
+            // svi poslovi
+            $poslovi = Japp::Query("SELECT * FROM apps WHERE idworker=$idview ORDER BY ewdone, wedone ASC");
+            foreach ($poslovi as $posao) {
+                $posao->idjob = Job::Query("SELECT * FROM job WHERE id=". $posao->idjob)[0];
+            }
+            var_dump($poslovi);
+        }
+        else
+        {
+            // uradjeni poslovi
+            $poslovi = Japp::Query("SELECT * FROM apps WHERE idworker=$idview AND ewdone=1 AND wedone=1");
+            foreach ($poslovi as $posao) {
+                $posao->idjob = Job::Query("SELECT * FROM job WHERE id=". $posao->idjob)[0];
+            }
+            
+        }
+
         
          
         Template::load('base')
@@ -68,6 +90,7 @@ require 'models/employer.php';
                     ->employer($employer)
                     ->editable($editable)
                     ->user($view)
+                    ->poslovi($poslovi)
                     ->get() 
             )
             ->render();

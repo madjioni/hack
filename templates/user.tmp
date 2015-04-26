@@ -9,6 +9,24 @@
         <input type="text" name="mail" value="{user.mail}"><br>
         <button type="submit">Izmeni</button>
     </form>
+
+    [if poslovi|count]
+        [foreach posao in poslovi]
+            <p>Naziv: {posao.idjob.title} <br>
+            [if posao.idjob.wedone]
+                [if posao.idjob.ewdone]
+                    Rate: {posao.idjob.werate} <br>
+                    Comm: {posao.idjob.wecomm} <br>
+                [else]
+                    TODO <br>
+                    TODO <br>
+                    TODO <br>
+                [end]
+            [end]
+            </p>
+        [end]
+    [end]
+
     [end]
 
 
@@ -24,9 +42,24 @@
         <button type="submit">Izmeni</button>
     </form>
 
+    [if poslovi|count]
+        [foreach posao in poslovi]
+            <p>Naziv: {posao.idjob.title} <br>
+            [if posao.idjob.ewdone]
+            [if posao.idjob.wedone]
+                Rate: {posao.idjob.ewrate} <br>
+                Comm: {posao.idjob.ewcomm} <br>
+            [else]
+                TODO <br>
+                TODO <br>
+                TODO <br>
+            [end]
+            [end]
+            </p>
+        [end]
     [end]
 
-
+    [end]
 
 [else]
     [if worker]
@@ -38,7 +71,16 @@
         Pol: {user.gender} <br>
         Godine: {user.age} <br>
         Tel: {user.phone}
-    </p>
+        </p>
+
+    [if poslovi|count]
+        [foreach posao in poslovi]
+            <p>Naziv: {posao.idjob.title} <br>
+            Rate: {posao.idjob.ewrate} <br>
+            Comm: {posao.idjob.ewcomm}</p>
+        [end]
+    [end]
+        
     [end]
 
     [if employer]
@@ -50,6 +92,14 @@
         Opis: {user.description} <br>
         Tel: {user.phone}
     </p>
+
+    [if poslovi|count]
+        [foreach posao in poslovi]
+            <p>Naziv: {posao.idjob.title} <br>
+            Rate: {posao.idjob.werate} <br>
+            Comm: {posao.idjob.wecomm}</p>
+        [end]
+    [end]
 
     [end]
     
