@@ -83,7 +83,7 @@ require 'models/japp.php';
                     // TODO
                     $sadrzaj .=
                     '
-                    <form action="/potvrda/tip/we/id//poso/" method="get">
+                    <form action="/potvrda/tip/we/id/'.$posao->idworker.'/poso/'.$posao->idjob->id.'" method="get">
                         <input type="text" name="comm">
                         <input type="text" name="comm">
                         <button type="submit" value="Posalji">Posalji</button>
@@ -93,6 +93,14 @@ require 'models/japp.php';
                 if($posao->ewdone && $tbname=='employer')
                 {
                     // TODO
+                    $sadrzaj .=
+                    '
+                    <form action="/potvrda/tip/ew/id/'.$posao->idworker.'/poso/'.$posao->idjob->id.'" method="get">
+                        <input type="text" name="comm">
+                        <input type="text" name="comm">
+                        <button type="submit" value="Posalji">Posalji</button>
+                    </form>
+                    ';
                 }
             }
             $sadrzaj .= '</p>';
