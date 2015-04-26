@@ -15,25 +15,28 @@
     [end]
 
     [if drugo]
-        <input type="text" name="title" value="{posao.title}"><br/>
-        <textarea name="description">{posao.description}</textarea><br/>
-        <input type="text" name="location" value="{posao.location}"> <br/>
-        <input type="date" name="date_start" value="{posao.datestart}"><br/>
-        <input type="date" name="date_end" value="{posao.dateend}"><br/>
-        <input type="number" name="num" min="1" max="100" value="{posao.num}"><br/>
-        <input type="text" name="price" value="{posao.price}"><br/>
-        <select name="price_type" value="{posao.pricetype}"><br>
+        <input type="hidden" value="{posao.id}" id="id">
+        <input type="text" id="title" value="{posao.title}"><br/>
+        <textarea id="description">{posao.description}</textarea><br/>
+        <input type="text" id="location" value="{posao.location}"> <br/>
+        <input type="date" id="datestart" value="{posao.datestart}"><br/>
+        <input type="date" id="dateend" value="{posao.dateend}"><br/>
+        <input type="number" id="activeend" value="{posao.activeend}"><br/>
+        <input type="number" id="num" min="1" max="100" value="{posao.num}"><br/>
+        <input type="text" id="price" value="{posao.price}"><br/>
+        <select id="pricetype" value="{posao.pricetype}"><br>
             <option value="1">RSD/dan</option>
             <option value="2">RSD/h</option>
             <option value="3">RSD/kg</option>
         </select> <br>
-        <input type="text" name="time" value="{posao.time}"><br/>
-        <input type="text" name="transport" value="{posao.transportation}"> <br>
-        <select name="category" value="{posao.idcat}"><br>
+        <input type="text" id="time" value="{posao.time}"><br/>
+        <input type="text" id="transport" value="{posao.transportation}"> <br>
+        <select id="category" value="{posao.idcat}"><br>
             <option value="1">KOPAC</option>
             <option value="2">BERAC</option>
         </select>
-
+    
+        <div id="izmene_res"></div>
         <div id="dugme_izmeni">Sacuvaj izmene</div>
 
         <!-- lista radnika -->
