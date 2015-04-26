@@ -24,3 +24,13 @@ TODO biznis logika
 TODO subscribtion
 TODO direct messages and notifications
 TODO proveriti 8100 u list.php
+
+
+CATEGORIES:
+-berac
+-uzgajivac
+-orezivac
+-sejac
+-zetelac
+-utovarioc
+-navodnjavac
