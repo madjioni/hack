@@ -1,10 +1,11 @@
 <div>
 [if editable]
     [if worker]
-    <form>
+    <form method="POST" action="/accup/t/w">
+        <input type="hidden" value="{user.id}" name="id">
         <input type="text" name="fn" value="{user.firstname}"><br>
         <input type="text" name="ln" value="{user.lastname}"><br>
-        <input type="text" nme="loc" value="{user.location}"><br>
+        <input type="text" name="loc" value="{user.location}"><br>
         <input type="text" name="ph" value="{user.phone}"><br>
         <input type="text" name="mail" value="{user.mail}"><br>
         <button type="submit">Izmeni</button>
@@ -18,10 +19,11 @@
 
 
     [if employer]
-    <form>
+    <form method="POST" action="/accup/t/e">
+        <input type="hidden" value="{user.id}" name="id">
         <input type="text" name="fn" value="{user.firstname}"><br>
         <input type="text" name="ln" value="{user.lastname}"><br>
-        <input type="text" nme="loc" value="{user.location}"><br>
+        <input type="text" name="loc" value="{user.location}"><br>
         <input type="text" name="ph" value="{user.phone}"><br>
         <input type="text" name="mail" value="{user.mail}"><br>
         <button type="submit">Izmeni</button>
