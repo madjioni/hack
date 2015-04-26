@@ -781,12 +781,11 @@ article {
   padding-top: 125px;
 }
 
-.confirm-section {
-  background: url('/media/img/background/background.jpg') no-repeat center center;
-  height: 850px;
+.static-confirm {
+  min-height: 900px;
 }
 
-.confirm-section p {
+.confirm-response {
   text-align: center;
   margin-top: 50px;
   padding: 30px;
@@ -795,7 +794,7 @@ article {
   font-size: 20px;
   color: #fff;
   display: block;
-  margin: 20% auto;
+  margin: 8% auto 0;
   width: 50%;
 }
 
