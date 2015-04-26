@@ -1,33 +1,28 @@
 <div>
 [if editable]
     [if worker]
-    <p>
-    TODO:EDITABLE IME:{user.firstname} <br>
-    TODO:EDITABLE PREZIME: {user.lastname} <br>
-    TODO:EDITABLE Lokacija: {user.location} <br>   
-    TODO:EDITABLE e-mail: {user.mail} <br>
-    TODO:EDITABLE Pol: {pol} <br>
-    TODO:EDITABLE Godine: {user.age} <br>
-    TODO:EDITABLE Tel: {user.phone} <br>
-
-
-
-    </p>
+    <form>
+        <input type="text" name="fn" value="{user.firstname}"><br>
+        <input type="text" name="ln" value="{user.lastname}"><br>
+        <input type="text" nme="loc" value="{user.location}"><br>
+        <input type="text" name="ph" value="{user.phone}"><br>
+        <input type="text" name="mail" value="{user.mail}"><br>
+        <button type="submit">Izmeni</button>
+    </form>
     [end]
 
 
 
 
     [if employer]
-    <p>
-    TODO:EDITABLE IME:{user.firstname} <br>
-    TODO:EDITABLE PREZIME: {user.lastname} <br>
-    TODO:EDITABLE Lokacija: {user.location} <br>   
-    TODO:EDITABLE e-mail: {user.mail} <br>
-    TODO:EDITABLE Opis: {user.description} <br>
-    TODO:EDITABLE Tel: {user.phone} <br>
-
-    </p>
+    <form>
+        <input type="text" name="fn" value="{user.firstname}"><br>
+        <input type="text" name="ln" value="{user.lastname}"><br>
+        <input type="text" nme="loc" value="{user.location}"><br>
+        <input type="text" name="ph" value="{user.phone}"><br>
+        <input type="text" name="mail" value="{user.mail}"><br>
+        <button type="submit">Izmeni</button>
+    </form>
 
     [end]
 
@@ -36,31 +31,24 @@
 [else]
     [if worker]
     <p>
-    IME:{user.firstname} <br>
-    PREZIME: {user.lastname} <br>
-    Lokacija: {user.location} <br>   
-    e-mail: {user.mail} <br>
-    Pol: {pol} <br>
-    Godine: {user.age} <br>
-    Tel: {user.phone} <br>
-
-
-
+        IME:{user.firstname} <br>
+        PREZIME: {user.lastname} <br>
+        Lokacija: {user.location} <br>   
+        e-mail: {user.mail} <br>
+        Pol: {user.gender} <br>
+        Godine: {user.age} <br>
+        Tel: {user.phone}
     </p>
     [end]
 
-
-
-
     [if employer]
     <p>
-    IME:{user.firstname} <br>
-    PREZIME: {user.lastname} <br>
-    Lokacija: {user.location} <br>   
-    e-mail: {user.mail} <br>
-    Opis: {user.description} <br>
-    Tel: {user.phone} <br>
-
+        IME:{user.firstname} <br>
+        PREZIME: {user.lastname} <br>
+        Lokacija: {user.location} <br>   
+        e-mail: {user.mail} <br>
+        Opis: {user.description} <br>
+        Tel: {user.phone}
     </p>
 
     [end]

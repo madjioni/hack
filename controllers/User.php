@@ -41,13 +41,14 @@ require 'models/employer.php';
         $tbnamev = Request::GET('t')=='w'?'worker':'employer';
         if($tbnamev=='worker')
         {
-            $view = Worker::Query("SELECT * FROM worker WHERE mail='$korisnik'");
+            $view = Worker::Query("SELECT * FROM worker WHERE id=$idview");
             $view = $view[0];
+            $view->gender = $view->gender==1?'muski':'zenski';
             $worker = true;
         }
         else if($tbnamev=='employer')
         {
-            $view = Employer::Query("SELECT * FROM employer WHERE mail='$korisnik'");
+            $view = Employer::Query("SELECT * FROM employer WHERE id=$idview");
             $view = $view[0];
             $employer = true;
         }
@@ -59,7 +60,7 @@ require 'models/employer.php';
         Template::load('base')
             ->title('Korisnik')
             ->logged($logged)
-            ->korisnik($mail)
+            ->korisnik($korisnik)
             ->content
             (
                 Template::load('user')
