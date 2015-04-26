@@ -678,6 +678,7 @@ i.avatar {
   width: 66%;
   background: rgb(239, 243, 246);
   padding: 30px;
+  margin-bottom: 10px;
 }
 
 .ratee p {
@@ -690,7 +691,24 @@ i.avatar {
 }
 
 .ratee .job-comm {
-  text-align: left;
+  text-align: center;
+  padding: 15px;
+}
+
+p.job-comm:after {
+  content: '\f10e';
+  font-family: FontAwesome;
+  font-size: 18px;
+  margin-left: 13px;
+  color: rgba(0,0,0,0.3);
+}
+
+p.job-comm:before {
+  content: '\f10d';
+  font-family: FontAwesome;
+  font-size: 18px;
+  margin-right: 13px;
+  color: rgba(0,0,0,0.3);
 }
 
 .ratee .job-title a {

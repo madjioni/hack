@@ -103,7 +103,7 @@ require 'models/japp.php';
                     $sadrzaj .= '<div class="ratee">';
                     $sadrzaj .= '<p class="job-title">Naziv: <a href="/job/id/'.$posao->idjob->id.'">'.$posao->idjob->title . '</a></p>';
                     $sadrzaj .= '<div class="job-rate">'.($tbnamev=='worker'?$posao->ewrate:$posao->werate) . '<span>☆</span></div>';
-                    $sadrzaj .= '<p class="job-comm">Comm: '.($tbnamev=='worker'?$posao->ewcomm:$posao->wecomm) . '</p>';
+                    $sadrzaj .= '<p class="job-comm">'.($tbnamev=='worker'?$posao->ewcomm:$posao->wecomm) . '</p>';
                     $sadrzaj .= '</div><br>';
                 }
                 if(!$posao->wedone && $tbname=='worker')
