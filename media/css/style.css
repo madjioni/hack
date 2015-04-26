@@ -1216,6 +1216,11 @@ input[type=checkbox]:focus {
 #subscribe .form-control {
   border-left: 3px solid #C00000;
 }
+
+#newsletter .subscr {
+  margin-top: 20px;
+}
+
 /* Footer */
 .footer {
   background: url('../img/background/background.jpg') no-repeat top center;
