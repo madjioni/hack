@@ -29,7 +29,6 @@
             <option value="2">RSD/h</option>
             <option value="3">RSD/kg</option>
         </select> <br>
-<<<<<<< HEAD
         <input type="text" name="time" value="{posao.time}"><br/>
         <input type="text" name="transport" value="{posao.transportation}"> <br>
         <select name="category" value="{posao.idcat}"><br>
@@ -41,13 +40,6 @@
             <option value="6">Zetelac</option>
             <option value="7">Utovarioc</option>
             <option value="8">Navodnjavac</option>
-=======
-        <input type="text" id="time" value="{posao.time}"><br/>
-        <input type="text" id="transport" value="{posao.transportation}"> <br>
-        <select id="category" value="{posao.idcat}"><br>
-            <option value="1">KOPAC</option>
-            <option value="2">BERAC</option>
->>>>>>> origin/master
         </select>
     
         <div id="izmene_res"></div>
