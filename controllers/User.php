@@ -94,17 +94,17 @@ require 'models/japp.php';
                 }
                 //var_dump($poslovi);
             }
-            
+
             foreach ($poslovi as $posao)
             {
-                
+
                 if($posao->ewdone && $posao->wedone)
                 {
-                    $sadrzaj .= '<p>';
-                    $sadrzaj .= 'Naziv: <a href="/job/id/'.$posao->idjob->id.'">'.$posao->idjob->title . '</a><br>';
-                    $sadrzaj .= 'Rate: '.($tbnamev=='worker'?$posao->ewrate:$posao->werate) . '<br>';
-                    $sadrzaj .= 'Comm: '.($tbnamev=='worker'?$posao->ewcomm:$posao->wecomm) . '<br>';
-                    $sadrzaj .= '</p>';
+                    $sadrzaj .= '<div class="ratee">';
+                    $sadrzaj .= '<p class="job-title">Naziv: <a href="/job/id/'.$posao->idjob->id.'">'.$posao->idjob->title . '</a></p>';
+                    $sadrzaj .= '<div class="job-rate">'.($tbnamev=='worker'?$posao->ewrate:$posao->werate) . '<span>☆</span></div>';
+                    $sadrzaj .= '<p class="job-comm">Comm: '.($tbnamev=='worker'?$posao->ewcomm:$posao->wecomm) . '</p>';
+                    $sadrzaj .= '</div>';
                 }
                 if(!$posao->wedone && $tbname=='worker')
                 {
@@ -169,7 +169,7 @@ require 'models/japp.php';
                     ';
                 }
             }
-            
+
         }
         // else
         // {
