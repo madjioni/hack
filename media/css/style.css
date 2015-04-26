@@ -774,7 +774,7 @@ article {
   display: none;
 }
 
-.single-job {
+#oglasi .single-job {
   width: 30%;
   float: left;
   display: block;
@@ -787,14 +787,14 @@ article {
   text-align: center;
 }
 
-.single-job .payment {
+#oglasi .single-job .payment {
   background: rgba(255, 0, 0, 0.5);
   padding: 20px 0;
   color: #fff;
   text-transform: uppercase;
 }
 
-.single-job .title {
+#oglasi .single-job .title {
   text-transform: uppercase;
   font-size: 25px;
   padding-top: 30px;
@@ -803,10 +803,52 @@ article {
   color: #fff;
 }
 
-.single-job .location {
+#oglasi .single-job .location {
   text-transform: uppercase;
   color: #fff;
 }
+#oglasi .single-job .avatar {
+  display: none;
+}
+
+#oglasi-all .single-job .title {
+  display: inline-block;
+  font-size: 24px;
+  padding-top: 25px;
+}
+
+#oglasi-all .single-job .title span {
+  font-size: 16px;
+  text-transform: initial;
+}
+
+#oglasi-all .single-job .avatar {
+  width: 70px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 20px;
+  float: left;
+}
+
+#oglasi-all .single-job .payment {
+  display: inline-block;
+  float: right;
+  padding: 43px;
+  background: rgba(0, 0, 0, 0.03);
+  margin: 0;
+}
+
+#oglasi-all .single-job {
+  text-align: left;
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.heading-job {
+  margin-bottom: 50px;
+}
+
 /* Alternative tab slider */
 .alt.nav-tabs {
   margin-bottom: 50px;
@@ -2739,8 +2781,7 @@ ol {
   #newsletter,
   #feedback,
   .footer {
-    background-size: auto !important;
-    background-size: auto !important;
+    background-size: cover !important;
     background-position: top center;
     background-attachment: scroll !important;
   }

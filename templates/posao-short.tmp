@@ -1,8 +1,6 @@
 <div class="single-job">
-    <a href="/job/id/{posao.id}">
-    <p class="title">{posao.title} </p>
-    <p class="location">Lokacija: {posao.location}</p>
+    <img class="avatar" src="http://www.choosemyplate.gov/images/new/fruits_tips_mixed_slices5.png">
+    <a href="/job/id/{posao.id}"><p class="title">{posao.title} <br/><span>{posao.description}</span></p></a>
+    <!-- <p class="location">Lokacija: {posao.location}</p> -->
     <p class="payment">{posao.price} {posao.pricetype}</p>
-
-    </a>
 </div>

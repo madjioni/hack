@@ -6,11 +6,11 @@
 
     <a id="showHere"></a>
 
-    <section id="oglasi" class="section dark">
+    <section id="oglasi-all" class="section dark">
   <div class="container">
       <div class="section-header animated hiding" data-animation="fadeInDown">
           <h2><span class="highlight">PAPRIKA</span> OGLASI</h2>
-          <div class="sub-heading">
+          <div class="sub-heading heading-job">
               Lorem ipsum dolor sit atmet sit dolor greand fdanrh s
               <br />dfs sit atmet sit dolor greand fdanrh sdfs
           </div>

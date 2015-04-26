@@ -15,6 +15,7 @@
     [end]
 
     [if drugo]
+<<<<<<< Updated upstream
         <input type="hidden" value="{posao.id}" id="id">
         <input type="text" id="title" value="{posao.title}"><br/>
         <textarea id="description">{posao.description}</textarea><br/>
@@ -44,6 +45,102 @@
     
         <div id="izmene_res"></div>
         <div id="dugme_izmeni">Sacuvaj izmene</div>
+=======
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                <form class="form form-register dark" id="job-edit">
+                    <input type="hidden" value="{posao.id}" id="id">
+
+                    <div class="form-group">
+                        <label for="title" class="col-sm-3 col-xs-12 control-label">Naslov</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="title" class="form-control" id="title" value="{posao.title}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description" class="col-sm-3 col-xs-12 control-label">Opis</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <textarea type="text" name="description" class="form-control" id="description" value="{posao.description}"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="location" class="col-sm-3 col-xs-12 control-label">Lokacija</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="location" class="form-control" id="location" value="{posao.location}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="datestart" class="col-sm-3 col-xs-12 control-label">Datum pocetka</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="date" name="datestart" class="form-control" id="datestart" value="{posao.datestart}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dateend" class="col-sm-3 col-xs-12 control-label">Datum zavrsetka</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="date" name="dateend" class="form-control" id="dateend" value="{posao.dateend}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="number" class="col-sm-3 col-xs-12 control-label">Broj radnika</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="number" value="3"  min="1" max="100" name="num" class="form-control" id="number" value="{posao.num}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="price" class="col-sm-3 col-xs-12 control-label">Zarada</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="price" class="form-control" id="price" value="{posao.price}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pricetype" class="col-sm-3 col-xs-12 control-label">Tip placanja</label>
+                        <div class="col-sm-9 col-xs-12">
+                             <select name="pricetype" class="form-control" id="pricetype" value="{posao.pricetype}">
+                                <option value="1">RSD/dan</option>
+                                <option value="2">RSD/h</option>
+                                <option value="3">RSD/kg</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="time" class="col-sm-3 col-xs-12 control-label">Radno vreme</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="time" class="form-control" id="time" value="{posao.time}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="transport" class="col-sm-3 col-xs-12 control-label">Transport</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="text" name="transport" class="form-control" id="transport" value="{posao.transportation}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="number" class="col-sm-3 col-xs-12 control-label">Trajanje oglasa</label>
+                        <div class="col-sm-9 col-xs-12">
+                            <input type="number" value="7"  min="1" max="30" name="activeend" class="form-control" id="number" value="{posao.activeend}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="category" class="col-sm-3 col-xs-12 control-label">Tip posla</label>
+                        <div class="col-sm-9 col-xs-12">
+                             <select name="category" class="form-control" id="category" value="{posao.idcat}">
+                                <option value="1">KOPAC</option>
+                                <option value="2">BERAC</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="izmene_res"></div>
+                    <div id="dugme_izmeni" class="btn btn-primary btn-lg btn-block" >Sacuvaj izmene</div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+>>>>>>> Stashed changes
 
         <!-- lista radnika -->
 
