@@ -20,5 +20,7 @@ job.php - jedan posao
 TODO proveravanje da ne postoji isti mejl u bazi etc
 TODO popraviti login
 TODO ispraviti sitne budjave tekstove po login/registracija etc response_...
-TODO sinhro vrednsti placanja
+TODO biznis logika
+TODO subscribtion
+TODO direct messages and notifications
 TODO proveriti 8100 u list.php

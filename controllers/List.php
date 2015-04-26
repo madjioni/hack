@@ -30,9 +30,9 @@ class ListController extends Controller {
             $start = date('m/d/Y h:i:s a', strtotime($posao->activestart));
             $unix_start = strtotime($start);
 
-            $diff = $posao->activeend * 24 * 60 * 60 * 1000;
+            $diff = $posao->activeend * 24 * 60 * 60;
 
-            if($start+$diff > $now)
+            if($unix_start+$diff > $unix_now)
             {
                 $posao->pricetype = $posao->pricetype==1?'RSD/dan':$posao->pricetype==2?'RSD/h':'RSD/kg';
                 $sadrzaj .= Template::load('posao-short')->ime($ime)->posao($posao)->poslid($id)->get();

@@ -78,9 +78,9 @@ class JobController extends Controller {
                     $start = date('m/d/Y h:i:s a', strtotime($posao->activestart));
                     $unix_start = strtotime($start);
 
-                    $diff = $posao->activeend * 24 * 60 * 60 * 1000;
+                    $diff = $posao->activeend * 24 * 60 * 60;
 
-                    $aktivan = $start+$diff > $now;
+                    $aktivan = ($unix_start+$diff > $unix_now);
                 }    
             }
 
