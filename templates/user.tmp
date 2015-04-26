@@ -57,6 +57,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                <a class="btn-create btn btn-primary btn-lg btn-block" href="/createjob">Kreiraj oglas</a>
                 <form class="form form-register dark" id="job-edit" method="POST" action="/accup/t/e">
                     <div class="form-group">
                         <input type="hidden" value="{user.id}" name="id">
@@ -104,20 +105,31 @@
 [else]
     [if worker]
     <p>
-        IME:{user.firstname} <br>
-        PREZIME: {user.lastname} <br>
-        Lokacija: {user.location} <br>
-        e-mail: {user.mail} <br>
-        Pol: {user.gender} <br>
-        Godine: {user.age} <br>
-        Tel: {user.phone}
-        </p>
+        <div class="container">
+            <div class="section-header rate animated hiding" data-animation="fadeInDown">
+               <h2>KORISNIK - <span class="highlight">{user.firstname} {user.lastname}</span></h2>
+            </div>
+            <div class="row">
+                <p>Lokacija: {user.location}</p>
+                <p>e-mail: {user.mail}</p>
+                <p>Pol: {user.gender}</p>
+                <p>Godine: {user.age}</p>
+                <p>Tel: {user.phone}</p>
+            </div>
+        </div>
 
     [if poslovi|count]
         [foreach posao in poslovi]
-            <p>Naziv: {posao.idjob.title} <br>
-            Rate: {posao.idjob.ewrate} <br>
-            Comm: {posao.idjob.ewcomm}</p>
+        <div class="container">
+            <div class="section-header rate animated hiding" data-animation="fadeInDown">
+               <h2>OCENE - <span class="highlight">POSLOVI</span></h2>
+            </div>
+            <div class="row">
+                <p>Naziv: {posao.idjob.title}</p>
+                <p>Rate: {posao.idjob.ewrate}</p>
+                <p>Comm: {posao.idjob.ewcomm}</p>
+            </div>
+        </div>
         [end]
     [end]
 

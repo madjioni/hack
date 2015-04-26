@@ -21,7 +21,9 @@ require 'models/japp.php';
         $worker = false;
         $employer = false;
         $editable = false;
-        $poslovi = null;
+        $poslovi = array();
+        $sadrzaj = '';
+
 
         if($logged)
         {
@@ -50,7 +52,7 @@ require 'models/japp.php';
             $idview = Request::GET('id');
             $tbnamev = Request::GET('t')=='w'?'worker':'employer';
         }
-        
+
         if($tbnamev=='worker')
         {
             $view = Worker::Query("SELECT * FROM worker WHERE id=$idview");
@@ -160,6 +162,7 @@ require 'models/japp.php';
             foreach ($poslovi as $posao) {
                 $posao->idjob = Job::Query("SELECT * FROM job WHERE id=". $posao->idjob)[0];
             }
+            $sadrzaj = $poslovi;
 
         }
 
