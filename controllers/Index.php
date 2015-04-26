@@ -20,7 +20,15 @@ class IndexController extends Controller {
             $ime =  $poslodavac[0]->firstname;
             $id = $poslodavac[0]->id;
             $posao->pricetype = $posao->pricetype==1?'RSD/dan':$posao->pricetype==2?'RSD/h':'RSD/kg';
-            $sadrzaj .= Template::load('posao-short')->ime($ime)->posao($posao)->poslid($id)->get();
+            $now = date('m/d/Y h:i:s a', time());
+            $unix_now = strtotime($now);
+
+            $start = date('m/d/Y h:i:s a', strtotime($posao->activestart));
+            $unix_start = strtotime($start);
+
+            $diff = $posao->activeend * 24 * 60 * 60;
+            if($unix_start+$diff > $unix_now)
+                $sadrzaj .= Template::load('posao-short')->ime($ime)->posao($posao)->poslid($id)->get();
 
         }
 

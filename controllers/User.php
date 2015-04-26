@@ -67,8 +67,8 @@ require 'models/japp.php';
             $employer = true;
         }
 
-
-        $editable = ($user->id==$view->id && $tbname==$tbnamev);
+        if($logged)
+            $editable = ($user->id==$view->id && $tbname==$tbnamev);
 
         if($editable)
         {
