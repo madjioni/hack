@@ -24,34 +24,8 @@ class CreatingJobController extends Controller {
 
         if($emplres){
 
-/*
-".$empl_res[0] ."
-*/
-
-/*
-            echo $empl_res[0][0];
-            echo "---";
-            var_dump($title);
-            var_dump($description);
-            var_dump($location);
-            var_dump($date_start);
-            var_dump($date_end);
-            var_dump($num);
-            var_dump($price);
-            var_dump($price_type);
-            var_dump($time);
-
-            var_dump($category);
-*/
-
-
-            $res = DB::Query("INSERT INTO job(id, title, description, location, datestart, dateend, num, price, pricetype, time, transportation, activeend, idemployer, idcat) VALUES (0, '$title', '$description', '$location', '$datestart', '$dateend', '$num', $price , $pricetype, $time,'$transport',$activeend,".$emplres[0][0].",$category)");
-
-/*
-
-            $res = DB::Query("INSERT INTO job VALUES (0, 'wqdq', 'des', 'BG', '2015-03-31', '2016-03-31', 4, 100 , 2,8,'trans',0,7, 1, 1)
-");
- */
+            $res = DB::Query("INSERT INTO job(id, title, description, location, datestart, dateend, num, price, pricetype, time, transportation, activeend, idemployer, idcat)
+                                    VALUES (0, '$title', '$description', '$location', '$datestart', '$dateend', $num, $price , $pricetype, '$time','$transport',$activeend,".$emplres[0][0].",$category)");
 
             if($res){
                 $result="Uspesno oglasen posao!";
