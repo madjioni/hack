@@ -104,18 +104,7 @@
         return false;
     });
 
-    // count down timer
-    var futureDate = new Date();
-    // count down 10 days from today
-    futureDate.setDate( futureDate.getDate() + 10 );
-    // or set specific date in the future
-    // futureDate = new Date(2014, 7, 26);
-    $('.countdown').countdown({
-        until       : futureDate,
-        compact     : true,
-        padZeroes   : true,
-        layout      : $('.countdown').html()
-    });
+
 
     // Form validation - sign up
 	// toastr.options = {"positionClass": "toast-top-full-width"};

@@ -568,7 +568,7 @@ article {
   display: inline-block;
   font-size: 20px;
   padding-top: 16px;
-  width: 80%;
+  width: 70%;
 }
 
 #oglasi-all .single-job .title span {
@@ -584,6 +584,11 @@ article {
   float: left;
 }
 
+i.avatar {
+  font-size: 50px;
+  color: #c00000;
+}
+
 #oglasi-all .single-job .payment {
   display: inline-block;
   float: right;
@@ -591,6 +596,8 @@ article {
   background: rgba(255, 0, 0, 0.6);
   color: #fff;
   margin: 0;
+  width: 13%;
+  text-align: center;
 }
 
 #oglasi-all .single-job {
