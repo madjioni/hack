@@ -37,9 +37,9 @@ $(document).ready(function() {
             }
         })
         .done(function( msg ) {
+
             $('#izmene_res').html("Rez: "+msg);
-
-
+            alertify.log("Uspesno izmenjeno");
         });
 
     });

@@ -1,6 +1,6 @@
     <div id="home" class="static-header small-header light">
         <div class="text-heading">
-            <h1>SEZONSKI POSLOVI</h1>
+
         </div>
     </div>
 
@@ -13,7 +13,7 @@
           <div class="sub-heading heading-job">
                   Nas oglasni servis je deo poslovnog i drustvenog okruzenja u Srbiji primarno orijentisanom ka profesionalnom i fer </br> odnosu prema svojim oglasivacima, radnicima i korisnicima.
                 </br></br>
-Ovakvim, inovativnim nacinom poslovanja stvaramo sredinu u kojoj svi zajedno, mozemo da napredujemo </br> i na taj nacin, unapredimo i lokalnu zajednicu, ciji smo nezaobilazan deo. 
+Ovakvim, inovativnim nacinom poslovanja stvaramo sredinu u kojoj svi zajedno, mozemo da napredujemo </br> i na taj nacin, unapredimo i lokalnu zajednicu, ciji smo nezaobilazan deo.
           </div>
           <div>{sadrzaj} </div>
       </div>

@@ -16,14 +16,14 @@
 
   <a id="showHere"></a>
 
-  <section id="oglasi" class="section dark">
+  <section id="oglasi-all" class="section dark">
       <div class="container">
           <div class="section-header animated hiding" data-animation="fadeInDown">
               <h2><span class="highlight">PAPRIKA</span> OGLASI</h2>
               <div class="sub-heading">
                   Nas oglasni servis je deo poslovnog i drustvenog okruzenja u Srbiji primarno orijentisanom ka profesionalnom i fer </br> odnosu prema svojim oglasivacima, radnicima i korisnicima.
                 </br></br>
-Ovakvim, inovativnim nacinom poslovanja stvaramo sredinu u kojoj svi zajedno, mozemo da napredujemo </br> i na taj nacin, unapredimo i lokalnu zajednicu, ciji smo nezaobilazan deo. 
+Ovakvim, inovativnim nacinom poslovanja stvaramo sredinu u kojoj svi zajedno, mozemo da napredujemo </br> i na taj nacin, unapredimo i lokalnu zajednicu, ciji smo nezaobilazan deo.
               </div>
               <div>{sadrzaj} </div>
           </div>
@@ -147,7 +147,7 @@ Ovakvim, inovativnim nacinom poslovanja stvaramo sredinu u kojoj svi zajedno, mo
                         <img src="media/img/logo.png" alt="logo" />
                     </div>
                     <p>Ljudi zaboravljaju da veliki procenat nasih poslova i dalje zavisi od poljoprivredne proizvodnje. </br></br>
-                    
+
                     Poljoprivreda nije samo uzgoj useva kako je to popularno generalizovano - to je proizvodnja hrane i zetva zdravih produkata sa prostora svetskog zemljista i voda. </br></br> Bez poljoprivrede nije moguce imati gradove, berzu, banke, univerzitete, crkve ili vojsku. Poljoprivreda je temelj civilizacije i stabilne ekonomije.</p>
                     <p><strong>Dragan Okanovic, CTO</strong>.</p>
                 </div>

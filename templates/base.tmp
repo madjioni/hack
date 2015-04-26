@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/animate.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/toastr.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/alertify.default.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/{CONFIG_CSS_DIR}/alertify.core.css" type="text/css" media="all" />
 
     <script type="text/javascript" src="/{CONFIG_JS_DIR}/jquery.js"></script>
 	</head>
@@ -82,6 +84,7 @@
     <script type="text/javascript" src="/{CONFIG_JS_DIR}/toastr.min.js"></script>
     <script type="text/javascript" src="/{CONFIG_JS_DIR}/headhesive.min.js"></script>
     <script type="text/javascript" src="/{CONFIG_JS_DIR}/scripts.js"></script>
+    <script type="text/javascript" src="/{CONFIG_JS_DIR}/alertify.min.js"></script>
 
 		[end]
 	</body>

@@ -82,7 +82,7 @@ class JobController extends Controller {
                     $diff = $posao->activeend * 24 * 60 * 60;
 
                     $aktivan = ($unix_start+$diff > $unix_now);
-                }    
+                }
             }
 
             if($tbname=='worker')
