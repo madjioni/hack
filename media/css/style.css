@@ -368,6 +368,15 @@ article {
 .navigation-bar-left {
   float: left;
 }
+
+.navigation.navigation-header .navigation-bar-left {
+  margin-left: -60px;
+}
+
+.navigation.navigation-header.fixmenu-clone.fixmenu-stick .navigation-bar-left {
+  margin-left: 0px !important;
+}
+
 .navigation-bar-right {
   float: right;
 }
