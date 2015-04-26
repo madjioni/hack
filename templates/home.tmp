@@ -38,7 +38,7 @@ Ovakvim, inovativnim nacinom poslovanja stvaramo sredinu u kojoj svi zajedno, mo
                    <p class="thin">Pretplatite se kako bi redovna obavestenja dospevala na vas e-mail!</p>
               </article>
           </div>
-          <div class="col-sm-12 col-lg-7">
+          <div class="col-sm-12 col-lg-7 subscr">
               <form id="subscribe" class="form" action="/demo/startuply/index-main.html" method="post">
                   <div class="form-group form-inline">
                     <input size="15" type="text" class="form-control required" id="NewsletterName" name="NewsletterName" placeholder="Ime" />
