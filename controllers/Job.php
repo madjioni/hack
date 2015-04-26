@@ -28,6 +28,7 @@ class JobController extends Controller {
         // dohvatanje posla
         $posao = Job::Query("SELECT * FROM job WHERE id=$job_id");
         $posao = $posao[0];
+        $posao->pricetype = $posao->pricetype==1?'RSD/dan':$posao->pricetype==2?'RSD/h':'RSD/kg';
 
         // dohvatanje poslodavca
         $poslodavac = Employer::Query("SELECT * FROM employer WHERE id=".$posao->idemployer);
