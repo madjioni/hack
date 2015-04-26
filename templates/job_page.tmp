@@ -30,8 +30,14 @@
         <input type="text" name="time" value="{posao.time}"><br/>
         <input type="text" name="transport" value="{posao.transportation}"> <br>
         <select name="category" value="{posao.idcat}"><br>
-            <option value="1">KOPAC</option>
-            <option value="2">BERAC</option>
+            <option value="1">Kopac</option>
+            <option value="2">Berac</option>
+            <option value="3">Uzgajivac</option>
+            <option value="4">Orezivac</option>
+            <option value="5">Sejac</option>
+            <option value="6">Zetelac</option>
+            <option value="7">Utovarioc</option>
+            <option value="8">Navodnjavac</option>
         </select>
 
         <div id="dugme_izmeni">Sacuvaj izmene</div>

@@ -83,8 +83,14 @@
                         <label for="category" class="col-sm-3 col-xs-12 control-label">Tip posla</label>
                         <div class="col-sm-9 col-xs-12">
                              <select name="category" class="form-control" id="category" placeholder="">
-                                <option value="1">KOPAC</option>
-                                <option value="2">BERAC</option>
+                                  <option value="1">Kopac</option>
+                                  <option value="2">Berac</option>
+                                  <option value="3">Uzgajivac</option>
+                                  <option value="4">Orezivac</option>
+                                  <option value="5">Sejac</option>
+                                  <option value="6">Zetelac</option>
+                                  <option value="7">Utovarioc</option>
+                                  <option value="8">Navodnjavac</option>
                             </select>
                         </div>
                     </div>
