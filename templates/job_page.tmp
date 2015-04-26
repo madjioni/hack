@@ -149,10 +149,12 @@
         Radno vreme: {posao.time} <br>
         Transport: {posao.transportation} <br>
         Opis: {posao.description} <br>
+        <input type="hidden" value="{posao.id}" id="idposao">
+        <input type="hidden" value="{user.id}" id="iduser">
     </p>
 
     <!-- provera da li je prijavljen vec ili ne -->
-    <div id="dugme_prijava">prijava</div>
+    <div id="dugme_prijava">Prijavi se</div>
     [end]
 
 </div>

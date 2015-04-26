@@ -70,29 +70,30 @@ $(document).ready(function() {
 
     });
 
-    $( "#dugme_prijavi" ).click(function() {
+    $( "#dugme_prijava" ).click(function() {
 
-        // $('#response_log').html("Login res: ");
-        // var f_email = $('#email_log').val();
-        // var f_pass = $('#password_log').val();
+        var dugme = $('#dugme_prijava').html();
+        var tip = dugme=='Prijavi se'?'prijava':'odjava';
+        var idposao = $('#idposao').val();
+        var iduser = $('#iduser').val();
+        console.log(iduser, idposao, tip);
 
-        // $.ajax({
-        //     method: "POST",
-        //     url: "/logincheck/",
-        //     data: {email: f_email, pass: f_pass}
-        // })
-        // .done(function( msg ) {
-        //     if(msg=='bad')
-        //     {
-        //         $('#response_log').html('Losi podaci.');
-        //         window.location.href = 'login';
-        //     } else
-        //     {
-        //         window.location.href = '/';
-        //     }
-
-
-        // });
+        $.ajax({
+            method: "POST",
+            url: "/prijava",
+            data: {idposao: idposao, iduser: iduser, tip: tip}
+        })
+        .done(function( msg ) {
+            if(msg=='odjavljen')
+            {
+                $('#dugme_prijava').html('Prijavi se');
+            }
+            else if(msg=='prijavljen')
+            {
+                $('#dugme_prijava').html('Odjavi se');
+            }
+            
+        });
 
     });
 
