@@ -22,22 +22,16 @@ class CreatingJobController extends Controller {
         $emplres = DB::Query(" SELECT id from employer where mail='".Session::GetData()['email']."'");
 
 
-        if($emplres){
+        if($emplres)
+        {
 
             $res = DB::Query("INSERT INTO job(id, title, description, location, datestart, dateend, num, price, pricetype, time, transportation, activeend, idemployer, idcat)
                                     VALUES (0, '$title', '$description', '$location', '$datestart', '$dateend', $num, $price , $pricetype, '$time','$transport',$activeend,".$emplres[0][0].",$category)");
 
-            if($res){
+            if($res)
                 Request::GotoAddress('/confirm/t/2');
-            }
-
-            else{
-
+            else
                 Request::GotoAddress('/confirm/t/1');
-
-            }
-
-            echo $result;
         }
         else{
 

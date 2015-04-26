@@ -6,27 +6,27 @@ class ConfirmController extends Controller {
     {
         $t = intval(Request::GET('t'));
         $msg = '';
-        if(t==1)
+        if($t==1)
         {
             $msg = 'Greska tokom kreiranja oglasa.';
         }
-        if(t==2)
+        if($t==2)
         {
             $msg = 'Oglas uspesno kreiran.';
         }
-        if(t==3)
+        if($t==3)
         {
             $msg = 'Komentar uspesno ostavljen.';
         }
-        if(t==4)
+        if($t==4)
         {
             $msg = '';
         }
-        if(t==5)
+        if($t==5)
         {
             $msg = '';
         }
-        if(t==6)
+        if($t==6)
         {
             $msg = '';
         }
@@ -35,7 +35,7 @@ class ConfirmController extends Controller {
             ->title('Confirmation')
             ->content
             (
-
+                $msg
             )
         ->render();
     }
