@@ -622,6 +622,7 @@ article {
   text-align: center;
   display: inline-block;
   margin-right: 50px;
+  margin-top: 20px;
 }
 
 #oglas .job-box i {
@@ -662,6 +663,35 @@ article {
 .rate h2 {
   text-align: center;
   font-size: 40px;
+}
+
+.ratee {
+  display: block;
+  margin: 0 auto;
+  width: 66%;
+  background: rgb(239, 243, 246);
+  padding: 30px;
+}
+
+.ratee p {
+  text-align: center;
+}
+
+.ratee .job-title {
+  display: block;
+  font-size: 20px;
+}
+
+.ratee .job-comm {
+  text-align: left;
+}
+
+.ratee .job-title a {
+  text-transform: uppercase;
+}
+
+.job-rate {
+  text-align: center;
 }
 
 /* Navigation Header */

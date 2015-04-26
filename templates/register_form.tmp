@@ -51,7 +51,7 @@
                                 <textarea type="text" class="form-control" name="description_rfe" id="description" placeholder=""></textarea>
                             </div>
                         </div>
-                        <button type="submit" value="Registracija" class="btn btn-primary btn-lg btn-block">Regisrtruj se</button>
+                        <button type="submit" value="Registracija" class="btn btn-primary btn-lg btn-block">Registruj se</button>
                     </form>
                 </div>
 
@@ -112,7 +112,7 @@
                             </div>
                         </div>
 
-                        <button type="submit" value="Registracija" class="btn btn-primary btn-lg btn-block">Regisrtruj se</button>
+                        <button type="submit" value="Registracija" class="btn btn-primary btn-lg btn-block">Registruj se</button>
                     </form>
                 </div>
             </div>
