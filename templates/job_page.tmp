@@ -7,16 +7,16 @@
 <section id="oglas" class="section dark">
     <div class="container">
         <div class="section-header animated hiding" data-animation="fadeInDown">
-           <p class="location">Lokacija: {posao.location}</p>
            <h2>Oglas - <span class="highlight">{posao.title}</span></h2>
            <p class="date"><a href="/user/id/{poslodavac.id}">Poslodavac: {poslodavac.firstname}</a>Datum: {posao.datestart} - {posao.dateend}</p>
            <div class="sub-heading description">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
                 {posao.description}
            </div>
+           <p class="location">Lokacija: {posao.location}</p>
            <p class="transport">Transport: {posao.transportation}</p>
            <p class="job-box num-employers"><i class="icon icon-faces-users-04 icon-active"></i>Broj radnika <span>{posao.num}</span></p>
-           <p class="job-box price"><i class="icon icon-office-24 icon-shopping-03"></i>Plata <span>{posao.price} ({posao.pricetype})</span></p>
+           <p class="job-box price"><i class="icon icon-office-24 icon-shopping-03"></i>Plata <span>{posao.price} {posao.pricetype}</span></p>
            <p class="job-box num-employers"><i class="icon icon-office-24 icon-active"></i>Radno vreme<span>{posao.time}h</span></p>
 
        </div>
@@ -167,16 +167,16 @@
     <section id="oglas" class="section dark">
         <div class="container">
             <div class="section-header animated hiding" data-animation="fadeInDown">
-               <p class="location">Lokacija: {posao.location}</p>
                <h2>Oglas - <span class="highlight">{posao.title}</span></h2><a id="dugme_prijava" class="btn-apply">Prijavi se</a>
                <p class="date"><a href="/user/id/{poslodavac.id}">Poslodavac: {poslodavac.firstname}</a>Datum: {posao.datestart} - {posao.dateend}</p>
                <div class="sub-heading description">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
                     {posao.description}
                </div>
+               <p class="location">Lokacija: {posao.location}</p>
                <p class="transport">Transport: {posao.transportation}</p>
                <p class="job-box num-employers"><i class="icon icon-faces-users-04 icon-active"></i>Broj radnika <span>{posao.num}</span></p>
-               <p class="job-box price"><i class="icon icon-office-24 icon-shopping-03"></i>Plata <span>{posao.price} ({posao.pricetype})</span></p>
+               <p class="job-box price"><i class="icon icon-office-24 icon-shopping-03"></i>Plata <span>{posao.price} {posao.pricetype}</span></p>
                <p class="job-box num-employers"><i class="icon icon-office-24 icon-active"></i>Radno vreme<span>{posao.time}h</span></p>
 
            </div>

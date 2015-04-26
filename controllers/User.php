@@ -68,11 +68,11 @@ require 'models/japp.php';
             }
 
             //var_dump($poslovi);
-            
+
             $sadrzaj .= '<p>';
             foreach ($poslovi as $posao)
             {
-                $sadrzaj .= 'Naziv: '.$posao->idjob->title . '<br>';
+                // $sadrzaj .= 'Naziv: '.$posao->idjob->title . '<br>';
                 if($posao->ewdone && $posao->wedone)
                 {
                     $sadrzaj .= 'Rate: '.$tbnamev=='worker'?$posao->werate:$posao->ewrate . '<br>';
@@ -83,11 +83,30 @@ require 'models/japp.php';
                     // TODO
                     $sadrzaj .=
                     '
-                    <form action="/potvrda/tip/we/id/'.$posao->idworker.'/poso/'.$posao->idjob->id.'" method="post">
-                        <input type="number" name="rate">
-                        <input type="text" name="comm">
-                        <button type="submit" value="Posalji">Posalji</button>
-                    </form>
+                    <div class="container">
+                        <div class="section-header rate animated hiding" data-animation="fadeInDown">
+                           <h2>OCENI - <span class="highlight">'.$posao->idjob->title .'</span></h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                                <form class="form form-register dark" action="/potvrda/tip/we/id/'.$posao->idworker.'/poso/'.$posao->idjob->id.'" method="post">
+                                    <div class="form-group">
+                                        <label for="rate" class="col-sm-3 col-xs-12 control-label">Ocena</label>
+                                        <div class="col-sm-9 col-xs-12">
+                                            <input type="number" min="1" max="5" name="rate" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="comm" class="col-sm-3 col-xs-12 control-label">Komentar</label>
+                                        <div class="col-sm-9 col-xs-12">
+                                            <textarea type="text" name="comm" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block" >Oceni</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     ';
                 }
                 if(!$posao->ewdone && $tbname=='employer')
@@ -95,11 +114,30 @@ require 'models/japp.php';
                     // TODO
                     $sadrzaj .=
                     '
-                    <form action="/potvrda/tip/ew/id/'.$posao->idworker.'/poso/'.$posao->idjob->id.'" method="post">
-                        <input type="number" name="rate">
-                        <input type="text" name="comm">
-                        <button type="submit" value="Posalji">Posalji</button>
-                    </form>
+                    <div class="container">
+                        <div class="section-header rate animated hiding" data-animation="fadeInDown">
+                           <h2>OCENI - <span class="highlight">'.$posao->idjob->title .'</span></h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                                <form class="form form-register dark" action="/potvrda/tip/ew/id/'.$posao->idworker.'/poso/'.$posao->idjob->id.'" method="post">
+                                    <div class="form-group">
+                                        <label for="rate" class="col-sm-3 col-xs-12 control-label">Ocena</label>
+                                        <div class="col-sm-9 col-xs-12">
+                                            <input type="number" min="1" max="5" name="rate" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="comm" class="col-sm-3 col-xs-12 control-label">Komentar</label>
+                                        <div class="col-sm-9 col-xs-12">
+                                            <textarea type="text" name="comm" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block" >Oceni</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     ';
                 }
             }
@@ -112,11 +150,11 @@ require 'models/japp.php';
             foreach ($poslovi as $posao) {
                 $posao->idjob = Job::Query("SELECT * FROM job WHERE id=". $posao->idjob)[0];
             }
-            
+
         }
 
-        
-         
+
+
         Template::load('base')
             ->title('Korisnik')
             ->logged($logged)
@@ -129,10 +167,9 @@ require 'models/japp.php';
                     ->editable($editable)
                     ->user($view)
                     ->poslovi($sadrzaj)
-                    ->get() 
+                    ->get()
             )
             ->render();
-        
+
     }
  }
-      

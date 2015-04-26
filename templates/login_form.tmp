@@ -23,7 +23,7 @@
                         </div>
 
                         <button id="dugme_log" class="btn btn-primary btn-lg btn-block">Uloguj se</button>
-                        <div id="response_log">Login res: </div>
+                        <!-- <div id="response_log">Login res: </div> -->
                     </form>
                 </div>
             </div>

@@ -855,6 +855,7 @@ article {
 
 #oglas {
   text-align: left;
+  padding: 0;
 }
 
 #oglas h2 {
@@ -898,6 +899,12 @@ article {
 
 .heading-job {
   margin-bottom: 50px;
+}
+
+/* Rate */
+.rate h2 {
+  text-align: center;
+  font-size: 40px;
 }
 
 /* Alternative tab slider */
