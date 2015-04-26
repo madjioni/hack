@@ -30,10 +30,10 @@
     </p>
 
     [end]
-[end]
 
 
-[if !editable]
+
+[else]
     [if worker]
     <p>
     IME:{user.firstname} <br>

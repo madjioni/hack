@@ -11,102 +11,65 @@ require 'models/employer.php';
 //
 
         $logged = isset(Session::GetData()['email']);
-        $mail = $logged ? Session::GetData()['email'] : 'niko';
+        $korisnik = $logged ? Session::GetData()['email'] : 'niko';
 
 
+        $user = null;
+        $view = null;
+        $worker = false;
+        $employer = false;
+        $editable = false;
 
-
-         if( isset($_GET['id']) ){
-
-            $id=Request::GET('id');
-            $user = Employer::Query("SELECT * FROM employer where id=".$id);
-            if($user){
+        if($logged)
+        {
+            // onaj ko pregleda stranicu
+            $tbname = Session::GetData()['type'];
+            if($tbname=='worker')
+            {
+                $user = Worker::Query("SELECT * FROM worker WHERE mail='$korisnik'");
                 $user = $user[0];
-                $tip_korisnika='e';
-
             }
-            else{
-
-            $user = Worker::Query("SELECT * FROM worker where where id=".$id);
-
-                if($user){
-                    $user = $user[0];
-                    $tip_korisnika='w';
-                    $pol=$user->gender;
-
-                }
-            }
-
-
-                //var_dump($user);
-                Template::load('base')
-                    ->title('Home')
-                    ->logged($logged)
-                    ->mail($mail)
-                    ->content
-                    (
-                        Template::load('user')
-                            ->user($user)
-                            ->worker($tip_korisnika=='w'? 1:0)
-                            ->employer($tip_korisnika=='e'? 1:0)
-                            ->pol($pol?"Musko":"Zensko")
-                            ->editable(false)
-                            ->get()
-                            
-                    )
-                    ->render();
-
-
-       }
-
-       else if($logged){
-
-            $user = Employer::Query("SELECT * FROM employer where mail='".$mail."'");
-            if($user){
+            else if($tbname=='employer')
+            {
+                $user = Employer::Query("SELECT * FROM employer WHERE mail='$korisnik'");
                 $user = $user[0];
-                $tip_korisnika='e';
-
             }
-            else{
+        }
 
-            $user = Worker::Query("SELECT * FROM worker where mail='".$mail."'");
+        // cija stranica se pregleda
+        $idview = Request::GET('id');
+        $tbnamev = Request::GET('t')=='w'?'worker':'employer';
+        if($tbnamev=='worker')
+        {
+            $view = Worker::Query("SELECT * FROM worker WHERE mail='$korisnik'");
+            $view = $view[0];
+            $worker = true;
+        }
+        else if($tbnamev=='employer')
+        {
+            $view = Employer::Query("SELECT * FROM employer WHERE mail='$korisnik'");
+            $view = $view[0];
+            $employer = true;
+        }
 
-                if($user){
-                    $user = $user[0];
-                    $tip_korisnika='w';
-                    $pol=$user->gender;
+        $editable = ($user->id==$view->id && $tbname==$tbnamev);
 
-                }
-            }
-
-
-                //var_dump($user);
-                Template::load('base')
-                    ->title('Home')
-                    ->logged($logged)
-                    ->mail($mail)
-                    ->content
-                    (
-                        Template::load('user')
-                            ->user($user)
-                            ->worker($tip_korisnika=='w'?1:0)
-                            ->employer($tip_korisnika=='e'?1:0)
-                            ->editable(true)
-                            ->pol($pol?"Musko":"Zensko")
-                            ->get()
-                            
-                    )
-                    ->render();
-            }
-         
-       
-
-
-       
-       else Request::GotoAddress('/');
-    
         
-
+         
+        Template::load('base')
+            ->title('Korisnik')
+            ->logged($logged)
+            ->korisnik($mail)
+            ->content
+            (
+                Template::load('user')
+                    ->worker($worker)
+                    ->employer($employer)
+                    ->editable($editable)
+                    ->user($view)
+                    ->get() 
+            )
+            ->render();
         
     }
  }
