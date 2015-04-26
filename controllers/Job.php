@@ -21,6 +21,8 @@ class JobController extends Controller {
         $poslodavac = null;
         $posao = null;
 
+        $radnici = null;
+
         // dohvatanje posla
         $posao = Job::Query("SELECT * FROM job WHERE id=$job_id");
         $posao = $posao[0];
@@ -59,6 +61,7 @@ class JobController extends Controller {
                 else
                 {
                     $opcija_druga = true;
+                    $radnici = array();
                 }    
             }
 
@@ -80,6 +83,8 @@ class JobController extends Controller {
                     ->poslodavac($poslodavac)
                     ->user($user)
                     ->posao($posao)
+
+                    ->radnici($radnici)
 
                     ->prvo($opcija_prva)
                     ->drugo($opcija_druga)
